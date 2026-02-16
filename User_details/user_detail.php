@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | OpenLib</title>
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="user_detail.css">
 </head>
 <body>
 
@@ -12,70 +12,63 @@
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.php">Dashboard</a>
-    <a href="../Home/index.php">Home</a>
+    <a href="../dashboard/dashboard.html">Dashboard</a>
+    <a href="../Home/Main.html">Home</a>
     <a href="#">Catalog</a>
-    <a href="../contact us/contact.php">Contact</a>
-    <a href="../About_us/about_us.php">About Us</a>
+    <a href="../contact us/contact.html">Contact</a>
+    <a href="../Abou_us/about_us.html">About Us</a>
     
 
-    <a href="../Login/user_login.php" class="btn login">Login</a>
-    <a href="../Register/register.php" class="btn signup">Sign Up</a>
+    <a href="../Login page/user_login.html" class="btn login">Login</a>
+    <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
   </nav>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
+<div class="container">
 
-<section class="form-contact">
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <img src="user.jpg" alt="User Photo">
+    <h2>Nadeesha Kalhara</h2>
+    <p>nadeesha@gmail.com</p>
 
-  <div class="contact-container">
-        <h2>Send Us a Message</h2>
-        <p>We would love to hear from you!</p>
-
-        <form>
-            <div class="input-group">
-                <label>Name</label>
-                <input type="text" placeholder="Enter your name" required>
-            </div>
-
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="input-group">
-                <label>Message</label>
-                <textarea rows="4" placeholder="Type your message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn-msg">Send Message</button>
-        </form>
-      </div><br>
-    <div class="contact-container-info">
-        
-       
-            <div class="group-content-info">
-              <h2>Library Information</h2><br><br><br>
-              <h3>Address:</h3><br>
-              <p>NSBM Green University, Homagama, Colombo, Sri Lanka</p><br><br>
-            </div>
-
-            <div class="group-content-info">
-              <h3>Email:</h3><br>
-              <p>openlib@gmail.com</p><br><br>
-            </div>
-
-            <div class="group-content-info">
-              <h3>Contact No:</h3><br>  
-              <p>+9470 346 6781</p><br><br>
-            </div>
-
+    <div class="info">
+      <div><b>Library Code:</b> LIB1023</div>
+      <div><b>Fines:</b> Rs. 150.00</div>
     </div>
-</section>
 
+    <a href="../User_details/edit_detail/edit_detail.php" class="btn">Edit Profile</a>
+  </div>
 
+  <!-- Books Section -->
+  <div class="books-card">
+    <h3>📚 Taken Books</h3>
 
+    <table>
+      <tr>
+        <th>Book Name</th>
+        <th>Borrow Date</th>
+        <th>Return Date</th>
+      </tr>
+
+      <tr>
+        <td>Java Programming</td>
+        <td>2025-02-10</td>
+        <td>2025-02-17</td>
+      </tr>
+
+      <tr>
+        <td>Web Development</td>
+        <td>2025-02-05</td>
+        <td>2025-02-12</td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>
 <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -118,3 +111,4 @@
 <script src="contact.js"></script>
 </body>
 </html>
+ 

@@ -67,12 +67,6 @@ body{
   background: #1abc9c;
   color: #000;
 }
-.navbar .signup:hover{
-  background: #ffffff;
-  color: #1abc9c;
-  
-    
-}
 
 .menu-toggle{
   display: none;
@@ -84,45 +78,17 @@ body{
 
 .form-contact{
   padding:40px;
-  align-content: center;
   
 }
-.form-contact{
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 40px 20px;
-  background: #f3f6fb;
+.contact-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    align-content: center;
 }
-
-/* Contact form box */
-.contact-container{
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-/* Info box */
-.contact-container-info{
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 380px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-/* Center text */
-.contact-container h2,
-.contact-container p{
-  text-align: center;
-}
-
 .contact-container h2 {
     text-align: center;
     margin-bottom: 5px;
@@ -266,4 +232,3 @@ body{
     padding-left: 0;
   }
 }
-   
