@@ -20,7 +20,7 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 ?>
 <?php
 session_start();
-require_once '../Register/db_connect.php'; // Adjust path based on your folder structure
+require_once '../db_connect.php'; // Adjust path based on your folder structure
 
 if (isset($_POST['login'])) {
     // Get and sanitize input
@@ -136,7 +136,7 @@ $conn->close();
 
       <div class="remember-forgot">
         <label><input type="checkbox" name="remember"> Remember me</label>
-        <a href="forgot_password.php">Forgot password?</a>
+        <a href="../Forgot_password/email_sec/email.php">Forgot password?</a>
       </div>
 
       <button type="submit" class="btn" name="login">Login</button>
