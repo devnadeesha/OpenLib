@@ -11,10 +11,10 @@
         <div class="logo">Open<span>Lib</span></div>
 
             <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
+    <a href="../User_details/user_detail.php">User Profile</a>
+    <a href="../Home/index.php">Home</a>
     <a href="#">Catalog</a>
-    <a href="../contact us/contact.html">Contact</a>
+    <a href="../contact/contact.php">Contact</a>
     <a href="../Abou_us/about_us.html">About Us</a>
     
 
@@ -133,10 +133,10 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>    
-                        <li><a href="../Home/Main.html">Home</a></li>
+                        <li><a href="../User_details/user_detail.php">User Profile</a></li>    
+                        <li><a href="../Home/index.php">Home</a></li>
                         <li><a href="#">Book Catalog</a></li>
-                        <li><a href="../contact us/contact.html">Contact</a></li>
+                        <li><a href="../contact/contact.php">Contact</a></li>
                         <li><a href="../Abou_us/about_us.html">About Us</a></li>
                     </ul>
                 </div>

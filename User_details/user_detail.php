@@ -39,7 +39,7 @@
       <div><b>Fines:</b> Rs. 150.00</div>
     </div>
 
-    <a href="../User_datails/edit_detail/edit_detail.php" class="btn">Edit Profile</a>
+    <a href="../User_details/edit_detail/edit_detail.php" class="btn">Edit Profile</a>
   </div>
 
   <!-- Books Section -->
