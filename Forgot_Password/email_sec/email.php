@@ -8,6 +8,35 @@
 <body>
 
 <div class="wrapper">
+  <?php
+session_start();
+require_once '../../db_connect.php'; // Adjust path to your database connection file
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = trim($_POST['email']);
+    
+    // Check if email exists in database
+    $sql = "SELECT user_id, email FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    if ($result->num_rows === 1) {
+        // Email exists
+        $user = $result->fetch_assoc();
+        $_SESSION['reset_email'] = $user['email'];
+        echo "ok";
+        header("Location: ../reset_sec/reset.php");
+    } else {
+        // Email not found
+        echo "not_found";
+    }
+    
+    $stmt->close();
+    $conn->close();
+}
+?>
   <form action="email.php" method="POST" id="forgotForm">
     <h1>Forgot Password</h1>
 
@@ -20,7 +49,7 @@
 </form>
 
 </div>
-<script>
+<!-- <script>
     document.getElementById("forgotForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -44,7 +73,7 @@
         }
     });
     });
-</script>
+</script> -->
 
 
 
