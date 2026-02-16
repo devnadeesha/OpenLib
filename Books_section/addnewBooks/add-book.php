@@ -31,7 +31,12 @@
     <h1 class="page-title">Add New Book</h1>
     
     <div class="form-wrapper">
-      <form id="bookForm" class="book-form" onsubmit="handleAddBook(event)">
+     <form id="bookForm"
+      class="book-form"
+      method="POST"
+      enctype="multipart/form-data"
+      onsubmit="handleAddBook(event)">
+
         
         <div class="form-row">
           <div class="form-group">
@@ -186,6 +191,6 @@
   </div>
 </footer>
 
-<script src="assets/add-book.js"></script>
+<script src="../../assets/add-book.js"></script>
 </body>
 </html>
