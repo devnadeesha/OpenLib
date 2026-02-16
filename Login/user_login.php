@@ -22,7 +22,7 @@
       </div>
       <div class="remember-forgot">
         <label><input type="checkbox" name="Checkbox">Remember Me</label>
-        <a href="../forgot_password/email_section/email.html">Forgot Password</a>
+        <a href="../Forgot_Password/email_sec/email.php">Forgot Password</a>
       </div>
       <button type="submit" class="btn" name="login">Login</button>
       <div class="register-link">
