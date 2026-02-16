@@ -52,7 +52,7 @@ if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] == 0) {
 
 $sql = "INSERT INTO books(title, author, isbn, genre, publication_year, pages, publisher, quantity, available_quantity, description, cover_image)
 
-('$title', '$author', '$isbn', '$genre', '$year', '$pages', '$publisher',
+VALUES ('$title', '$author', '$isbn', '$genre', '$year', '$pages', '$publisher',
  '$quantity', '$available_quantity', '$description', '$cover_image')";
 
 // $stmt = $conn->prepare($sql); meka dannae owata berenna  ❌ SQL Injection ❌ Hackers inserting malicious SQL
