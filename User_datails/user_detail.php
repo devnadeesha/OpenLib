@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | OpenLib</title>
-    <link rel="stylesheet" href="user_detail.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Profile</title>
+<link rel="stylesheet" href="user_detail.css">
 </head>
 <body>
-    <!-- header -->
-    <header class="header">
-        <div class="logo">Open<span>Lib</span></div>
 
-            <nav class="navbar" id="navMenu">
-                <a href="../dashboard/dashboard.html">Dashboard</a>
-                <a href="../Home/Main.html">Home</a>
-                <a href="#">Catalog</a>
-                <a href="../contact us/contact.html">Contact</a>
-                <a href="../Abou_us/about_us.html">About Us</a>
-                
+<div class="container">
 
-                <a href="../Login/user_login.php" class="btn login">Login</a>
-                <a href="../Register/register.php" class="btn signup">Sign Up</a>
-            </nav>
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <img src="user.jpg" alt="User Photo">
+    <h2>Nadeesha Kalhara</h2>
+    <p>nadeesha@gmail.com</p>
 
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    </header>
+    <div class="info">
+      <div><b>Library Code:</b> LIB1023</div>
+      <div><b>Fines:</b> Rs. 150.00</div>
+    </div>
 
-  <p>test</p>
-    <!-- Footer -->
-   <footer class="footer">
+    <a href="../User_datails/edit_detail/edit_detail.php" class="btn">Edit Profile</a>
+  </div>
+
+  <!-- Books Section -->
+  <div class="books-card">
+    <h3>📚 Taken Books</h3>
+
+    <table>
+      <tr>
+        <th>Book Name</th>
+        <th>Borrow Date</th>
+        <th>Return Date</th>
+      </tr>
+
+      <tr>
+        <td>Java Programming</td>
+        <td>2025-02-10</td>
+        <td>2025-02-17</td>
+      </tr>
+
+      <tr>
+        <td>Web Development</td>
+        <td>2025-02-05</td>
+        <td>2025-02-12</td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>
+<footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
