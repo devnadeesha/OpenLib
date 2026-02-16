@@ -27,7 +27,7 @@ if (empty($title) || empty($author) || empty($isbn)) {
 // IMAGE UPLOAD (Simple) section eka hadana thana 
 // ============================
 
-$cover_image = "";
+$cover_image = "";// crud eke update eka thamai methana yanne 
 
 if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] == 0) {
 
@@ -51,7 +51,9 @@ if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] == 0) {
 // ============================
 
 $sql = "INSERT INTO books(title, author, isbn, genre, publication_year, pages, publisher, quantity, available_quantity, description, cover_image)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+('$title', '$author', '$isbn', '$genre', '$year', '$pages', '$publisher',
+ '$quantity', '$available_quantity', '$description', '$cover_image')";
 
 // $stmt = $conn->prepare($sql); meka dannae owata berenna  ❌ SQL Injection ❌ Hackers inserting malicious SQL
 
