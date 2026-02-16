@@ -1,3 +1,10 @@
+<?php
+require_once '../Books_section/handlers/add_book_handler.php';
+
+$sql = "SELECT * FROM books";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
