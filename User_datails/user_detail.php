@@ -1,73 +1,62 @@
+<?php
+session_start();
+$conn = new mysqli("localhost","root","","library_db");
+
+// login system eken enne
+$user_id = $_SESSION['user_id'] ?? 1;
+
+$user = $conn->query("SELECT * FROM users WHERE id='$user_id'")->fetch_assoc();
+$books = $conn->query("SELECT * FROM borrow_books WHERE user_id='$user_id'");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | OpenLib</title>
-    <link rel="stylesheet" href="user_detail.css">
+<meta charset="UTF-8">
+<title>User Profile</title>
+<link rel="stylesheet" href="user_detail.css">
 </head>
 <body>
-    <!-- header -->
-    <header class="header">
-        <div class="logo">Open<span>Lib</span></div>
 
-            <nav class="navbar" id="navMenu">
-                <a href="../dashboard/dashboard.html">Dashboard</a>
-                <a href="../Home/Main.html">Home</a>
-                <a href="#">Catalog</a>
-                <a href="../contact us/contact.html">Contact</a>
-                <a href="../Abou_us/about_us.html">About Us</a>
-                
+<div class="container">
 
-                <a href="../Login/user_login.php" class="btn login">Login</a>
-                <a href="../Register/register.php" class="btn signup">Sign Up</a>
-            </nav>
+  <div class="profile-card">
+    <img src="<?php echo $user['photo']; ?>" alt="Profile">
+    <h2><?php echo $user['name']; ?></h2>
+    <p><?php echo $user['email']; ?></p>
 
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    </header>
+    <div class="info">
+      <div><b>Library Code:</b> <?php echo $user['library_code']; ?></div>
+      <div><b>Fines:</b> Rs. <?php echo $user['fine']; ?></div>
+    </div>
 
-  <p>test</p>
-    <!-- Footer -->
-   <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <a href="/" class="footer-logo">OpenLib</a>
-                    <p class="footer-description">Your gateway to knowledge. Explore thousands of books and join our vibrant reading community.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>    
-                        <li><a href="../Home/Main.html">Home</a></li>
-                        <li><a href="#">Book Catalog</a></li>
-                        <li><a href="../contact us/contact.html">Contact</a></li>
-                        <li><a href="../Abou_us/about_us.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Account</h3>
-                    <ul>
-                        <li><a href="../Login/user_login.php">Log In</a></li>
-                        <li><a href="../Register/register.php">Sign Up</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Library Hours</h3>
-                    <ul>
-                        <li>Mon - Fri: 8:00 AM - 9:00 PM</li>
-                        <li>Saturday: 9:00 AM - 6:00 PM</li>
-                        <li>Sunday: 10:00 AM - 5:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>PageTurn Library. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <a href="../auth/logout.php" class="btn logout">Logout</a>
+  </div>
 
+  <div class="book-card">
+    <h3>📚 Taken Books</h3>
 
-    <script src="script.js"></script>
+    <table>
+      <tr>
+        <th>Book Name</th>
+        <th>Borrow Date</th>
+        <th>Return Date</th>
+      </tr>
+
+      <?php while($row = $books->fetch_assoc()){ ?>
+      <tr>
+        <td><?php echo $row['book_name']; ?></td>
+        <td><?php echo $row['borrow_date']; ?></td>
+        <td><?php echo $row['return_date']; ?></td>
+      </tr>
+      <?php } ?>
+
+    </table>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
