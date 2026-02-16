@@ -18,8 +18,8 @@
     <a href="../Abou_us/about_us.html">About Us</a>
     
 
-    <a href="../Login page/user_login.html" class="btn login">Login</a>
-    <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
+    <a href="../Login/user_login.php" class="btn login">Login</a>
+    <a href="../Register/register.php" class="btn signup">Sign Up</a>
   </nav>
 
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -133,7 +133,7 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
+                        <li><a href="../Dashboard/dashboard.html">Dashboard</a></li>    
                         <li><a href="../Home/Main.html">Home</a></li>
                         <li><a href="#">Book Catalog</a></li>
                         <li><a href="../contact us/contact.html">Contact</a></li>
@@ -143,8 +143,8 @@
                 <div class="footer-column">
                     <h3>Account</h3>
                     <ul>
-                        <li><a href="../Login page/user_login.html">Log In</a></li>
-                        <li><a href="../Register/user_register.html">Sign Up</a></li>
+                        <li><a href="../Login/user_login.php">Log In</a></li>
+                        <li><a href="../Register/register.php">Sign Up</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
