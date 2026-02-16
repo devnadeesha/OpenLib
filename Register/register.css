@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../picture/library1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper{
+  width: 420px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.406);
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 30px 40px;
+}
+
+.wrapper h1{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 15px 0;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.339);
+  border-radius: 40px;
+  outline: none;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+  font-size: 14px;
+}
+
+.input-box input::placeholder{
+  color: #ffffff;
+}
+
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.file-box input{
+  padding-top: 13px;
+}
+
+.btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  margin-top: 15px;
+}
+
+.btn:hover{
+  background: #f1f1f1;
+}
+
+.register-link{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.register-link a{
+  color: rgb(160, 198, 255);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover{
+  text-decoration: underline;
+}
+
+.alert {
+  /* padding: 15px; */
+  /* margin: 20px 0; */
+  /* border-radius: 5px; */
+  font-family: Arial, sans-serif;
+  /* background-color: #f8d7da; */
+  color: #842029;
+  /* border: 1px solid #f5c2c7; */
+}
+
+.alert-success {
+    padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  background-color: #46de7483;
+  color: #022715db;
+  border: 1px solid #46de7483;
+}

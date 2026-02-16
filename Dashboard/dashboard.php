@@ -19,11 +19,11 @@
     <a href="../Abou_us/about_us.html">About Us</a>
     
 
-    <a href="../Login page/user_login.html" class="btn login">Login</a>
+    <a href="../Login/user_login.php" class="btn login">Login</a>
     <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
   </nav>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>s
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
 
 <section class="dashboard">
