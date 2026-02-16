@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Reset Password</title>
+  <title>Reset Password | OpenLib</title>
   <link rel="stylesheet" href="reset.css">
 </head>
 <body>
 
 <div class="wrapper">
   <form action="reset_password.php" method="POST" onsubmit="return checkPassword()">
-    <h1>Reset Password</h1>
+    <h1>Reset Password</h1><br>
 
     <input type="hidden" name="email" value="<?php echo $_GET['email']; ?>">
 
@@ -18,7 +18,7 @@
     </div>
 
     <div class="input-box">
-      <input type="password" id="confirm" name="confirm_pass" placeholder="Confirm Password" required>
+      <input type="password" id="confirm" name="confirm_pass" placeholder="Confirm Password" required><br><br>
     </div>
 
     <button type="submit" class="btn">Update Password</button>
