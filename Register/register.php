@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
         
         if ($stmt->execute()) {
             $_SESSION['success'] = "Registration successful! Please login.";
-            header("Location: ../Login/user_login.php");
+            header("Location: ../Policies/terms.php");
             exit();
         } else {
             $errors[] = "Registration failed. Please try again.";
