@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../../db_connect.php'; // database connection
+require_once '../../db_connect.php'; // database connection eka hadaganna mula 
 
 // Only allow POST
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
@@ -24,14 +24,15 @@ if (empty($title) || empty($author) || empty($isbn)) {
 }
 
 // ============================
-// IMAGE UPLOAD (Simple)
+// IMAGE UPLOAD (Simple) section eka hadana thana 
 // ============================
 
 $cover_image = "";
 
 if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] == 0) {
 
-    $upload_folder = "../uploads/";
+    $upload_folder = "../upload_images_of_books_admin/";
+
     
     if (!is_dir($upload_folder)) {
         mkdir($upload_folder, 0777, true);
