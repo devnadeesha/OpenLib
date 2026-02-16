@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add New Book | OpenLib</title>
-  <link rel="stylesheet" href="../assets/add-book.css">
-  <link rel="stylesheet" href="../assets/dashboard.css">
+  <link rel="stylesheet" href="../../assets/dashboard.css">
+  <link rel="stylesheet" href="../../assets/add-book.css">
 </head>
 <body>
 
@@ -76,7 +76,7 @@
         <div class="form-row">
           <div class="form-group">
             <label for="bookYear">Publication Year *</label>
-            <input type="number" id="bookYear" name="year" placeholder="2026" min="1000" max="9999" required>
+            <input type="number" id="bookYear" name="year" placeholder="2024" min="1000" max="9999" required>
             <span class="error-message" id="yearError"></span>
           </div>
 
@@ -104,6 +104,23 @@
           <div class="form-group full-width">
             <label for="bookDescription">Description</label>
             <textarea id="bookDescription" name="description" placeholder="Enter book description..." rows="5"></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label for="bookCover">Book Cover Image *</label>
+            <div class="image-upload-wrapper">
+              <input type="file" id="bookCover" name="cover_image" accept="image/*" required>
+              <p class="upload-hint">Upload a JPG, PNG, or WebP image (Max 5MB)</p>
+            </div>
+            <span class="error-message" id="imageError"></span>
+            
+            <!-- Image Preview -->
+            <div id="imagePreviewContainer" class="image-preview-container" style="display:none;">
+              <img id="imagePreview" alt="Book Cover Preview">
+              <button type="button" class="btn-remove-image" onclick="removeImage()">Remove Image</button>
+            </div>
           </div>
         </div>
 

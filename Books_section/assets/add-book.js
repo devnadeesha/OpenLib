@@ -97,9 +97,16 @@ document.querySelectorAll('.book-form input, .book-form select').forEach(field =
 function handleAddBook(event) {
   event.preventDefault();
 
+  // Validate image is selected
+  const imageFile = document.getElementById('bookCover').files[0];
+  if (!imageFile) {
+    showMessage('Please select a book cover image', 'error');
+    return;
+  }
+
   // Get form values
   const formData = {
-    title: document.getElementById('bookTitle').value.trim(),//trim removes the white spaces :) of a string 
+    title: document.getElementById('bookTitle').value.trim(),
     author: document.getElementById('bookAuthor').value.trim(),
     isbn: document.getElementById('bookISBN').value.trim(),
     genre: document.getElementById('bookGenre').value,
@@ -143,35 +150,44 @@ function handleAddBook(event) {
     return;
   }
 
-  // Add new book with ID and timestamp
-  const newBook = {
-    id: Date.now(),
-    ...formData,
-    addedDate: new Date().toLocaleString()
+  // Convert image to Base64 for localStorage
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    // Add new book with ID, timestamp, and base64 image
+    const newBook = {
+      id: Date.now(),
+      ...formData,
+      imageData: event.target.result, // Base64 encoded image
+      imageName: imageFile.name,
+      addedDate: new Date().toLocaleString()
+    };
+
+    books.unshift(newBook); // Add to beginning of array
+    localStorage.setItem('libraryBooks', JSON.stringify(books));
+
+    // Show success message
+    showMessage('Book added successfully!', 'success');
+
+    // Reset form
+    document.getElementById('bookForm').reset();
+    removeImage();
+
+    // Update recently added books list
+    displayRecentBooks();
+
+    // Clear error messages
+    document.querySelectorAll('.error-message').forEach(el => {
+      el.classList.remove('show');
+      el.textContent = '';
+    });
+
+    // Scroll to recent books
+    setTimeout(() => {
+      document.querySelector('.recently-added').scrollIntoView({ behavior: 'smooth' });
+    }, 500);
   };
-
-  books.unshift(newBook); // Add to beginning of array
-  localStorage.setItem('libraryBooks', JSON.stringify(books));
-
-  // Show success message
-  showMessage('Book added successfully!', 'success');
-
-  // Reset form
-  document.getElementById('bookForm').reset();
-
-  // Update recently added books list
-  displayRecentBooks();
-
-  // Clear error messages
-  document.querySelectorAll('.error-message').forEach(el => {
-    el.classList.remove('show');
-    el.textContent = '';
-  });
-
-  // Scroll to recent books
-  setTimeout(() => {
-    document.querySelector('.recently-added').scrollIntoView({ behavior: 'smooth' });
-  }, 500);
+  
+  reader.readAsDataURL(imageFile);
 }
 
 // Display recently added books
@@ -189,16 +205,31 @@ function displayRecentBooks() {
 
   recentBooksList.innerHTML = recentBooks.map(book => `
     <div class="book-item">
-      <div class="book-item-title">${escapeHtml(book.title)}</div>
-      <div class="book-item-author">by ${escapeHtml(book.author)}</div>
-      <div class="book-item-genre">${escapeHtml(book.genre)}</div>
-      <div class="book-item-meta">
-        <span>${book.year}</span>
-        <span>${book.pages} pages</span>
-        <span>Qty: ${book.quantity}</span>
+      ${book.imageData ? `<img src="${book.imageData}" alt="${escapeHtml(book.title)}" class="book-item-image">` : '<div class="book-item-placeholder">No Image</div>'}
+      <div class="book-item-content">
+        <div class="book-item-title">${escapeHtml(book.title)}</div>
+        <div class="book-item-author">by ${escapeHtml(book.author)}</div>
+        <div class="book-item-genre">${escapeHtml(book.genre)}</div>
+        <div class="book-item-meta">
+          <span>${book.year}</span>
+          <span>${book.pages} pages</span>
+          <span>Qty: ${book.quantity}</span>
+        </div>
       </div>
+      <button class="book-item-delete" onclick="deleteBook(${book.id})" title="Delete book">✕</button>
     </div>
   `).join('');
+}
+
+// Delete book from localStorage
+function deleteBook(bookId) {
+  if (confirm('Are you sure you want to delete this book?')) {
+    let books = JSON.parse(localStorage.getItem('libraryBooks')) || [];
+    books = books.filter(book => book.id !== bookId);
+    localStorage.setItem('libraryBooks', JSON.stringify(books));
+    displayRecentBooks();
+    showMessage('Book deleted successfully!', 'success');
+  }
 }
 
 // Show message (success or error)
@@ -243,6 +274,65 @@ function escapeHtml(text) {
 function toggleMenu() {
   const navMenu = document.getElementById('navMenu');
   navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Image Upload and Preview
+const imageUploadWrapper = document.querySelector('.image-upload-wrapper');
+const fileInput = document.getElementById('bookCover');
+
+// Make the wrapper clickable to open file dialog
+imageUploadWrapper.addEventListener('click', function() {
+  fileInput.click();
+});
+
+// Handle file selection
+fileInput.addEventListener('change', function(e) {
+  const file = e.target.files[0];
+  
+  if (file) {
+    // Clear previous errors
+    document.getElementById('imageError').textContent = '';
+    
+    // Validate file type
+    const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
+    if (!validTypes.includes(file.type)) {
+      showImageError('Please upload a JPG, PNG, or WebP image');
+      fileInput.value = '';
+      return;
+    }
+    
+    // Validate file size (5MB max)
+    const maxSize = 5 * 1024 * 1024; // 5MB
+    if (file.size > maxSize) {
+      showImageError('Image must be smaller than 5MB');
+      fileInput.value = '';
+      return;
+    }
+    
+    // Show preview
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      const preview = document.getElementById('imagePreview');
+      const container = document.getElementById('imagePreviewContainer');
+      
+      preview.src = event.target.result;
+      container.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+// Remove image
+function removeImage() {
+  fileInput.value = '';
+  document.getElementById('imagePreviewContainer').style.display = 'none';
+  document.getElementById('imageError').textContent = '';
+}
+
+// Show image error
+function showImageError(message) {
+  document.getElementById('imageError').textContent = message;
+  document.getElementById('imagePreviewContainer').style.display = 'none';
 }
 
 // Load recent books on page load
