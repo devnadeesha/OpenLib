@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_connect.php';
+require_once '../db_connect.php';
 
 if (isset($_POST['submit'])) {
     // Sanitize and validate input
