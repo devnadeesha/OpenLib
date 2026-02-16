@@ -19,8 +19,8 @@
     <a href="../Abou_us/about_us.html">About Us</a>
     
 
-    <a href="../Login/user_login.php" class="btn login">Login</a>
-    <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
+    <a href="../Login/user_login.php" class="btn login">Logout</a>
+    
   </nav>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>

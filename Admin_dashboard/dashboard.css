@@ -63,17 +63,6 @@ body{
   border: 1px solid #1abc9c;
 }
 
-.signup{
-  background: #1abc9c;
-  color: #000;
-  border: 1px solid #1abc9c;
-}
-
-.signup:hover{
-  background: #ffffff;
-  
-}
-
 .menu-toggle{
   display: none;
   font-size: 26px;
