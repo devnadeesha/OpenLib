@@ -67,6 +67,12 @@ body{
   background: #1abc9c;
   color: #000;
 }
+.navbar .signup:hover{
+  background: #ffffff;
+  color: #1abc9c;
+  
+    
+}
 
 .menu-toggle{
   display: none;

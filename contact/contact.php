@@ -12,15 +12,15 @@
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
+    <a href="../dashboard/dashboard.php">Dashboard</a>
+    <a href="../Home/index.php">Home</a>
     <a href="#">Catalog</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
+    <a href="../contact us/contact.php">Contact</a>
+    <a href="../About_us/about_us.php">About Us</a>
     
 
-    <a href="../Login page/user_login.html" class="btn login">Login</a>
-    <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
+    <a href="../Login/user_login.php" class="btn login">Login</a>
+    <a href="../Register/register.php" class="btn signup">Sign Up</a>
   </nav>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
