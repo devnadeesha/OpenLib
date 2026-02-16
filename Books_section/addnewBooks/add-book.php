@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add New Book | OpenLib</title>
-  <link rel="stylesheet" href="../../assets/dashboard.css">
-  <link rel="stylesheet" href="../../assets/add-book.css">
+  <link rel="stylesheet" href="../assets/add-book.css">
+  <link rel="stylesheet" href="../assets/dashboard.css">
 </head>
 <body>
 
@@ -31,7 +31,12 @@
     <h1 class="page-title">Add New Book</h1>
     
     <div class="form-wrapper">
-      <form id="bookForm" class="book-form" onsubmit="handleAddBook(event)">
+     <form id="bookForm"
+      class="book-form"
+      method="POST"
+      enctype="multipart/form-data"
+      onsubmit="handleAddBook(event)">
+
         
         <div class="form-row">
           <div class="form-group">
@@ -186,6 +191,6 @@
   </div>
 </footer>
 
-<script src="assets/add-book.js"></script>
+<script src="../assets/add-book.js"></script>
 </body>
 </html>
