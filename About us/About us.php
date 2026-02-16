@@ -120,25 +120,25 @@
     <div class="team-container">
 
         <div class="team-card">
-            <img src="Kalhara2.jpeg" alt="Margaret Chen">
+            <img src="../Pictures/Kalhara.jpeg" alt="Margaret Chen">
             <h3>Nadeesha Kalhara</h3>
             <p>Head Librarian</p>
         </div>
 
         <div class="team-card">
-            <img src="Dayashan.jpeg" alt="James Okafor">
+            <img src="../Pictures/Dayashan.jpeg" alt="James Okafor">
             <h3>Dayashan Chamuditha</h3>
             <p>Collections Manager</p>
         </div>
 
         <div class="team-card">
-            <img src="Dasun.jpeg" alt="Sarah Williams">
+            <img src="../Pictures/Dasun.jpeg" alt="Sarah Williams">
             <h3>Dasun Kavinda</h3>
             <p>Youth Programs Director</p>
         </div>
 
         <div class="team-card">
-            <img src="Prabasha.jpeg" alt="David Park">
+            <img src="../Pictures/Prabasha.jpeg" alt="David Park">
             <h3>Prabasha Pasindu</h3>
             <p>Digital Services Lead</p>
         </div>
