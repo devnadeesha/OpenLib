@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
             'l_name' => $last_name,
             'email' => $email
         ];
-        header("Location: register_form.php");
+        header("Location: register.php");
         exit();
     }
 }
