@@ -9,22 +9,22 @@
 <body>
 
 <header class="header">
-  <div class="logo">Open<span>Lib</span></div>
+        <div class="logo">Open<span>Lib</span></div>
 
-  <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
-    <a href="#">Catalog</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
-    
+            <nav class="navbar" id="navMenu">
+                <a href="../User_details/user_detail.php">User Profile</a>
+                <a href="../Home/index.php">Home</a>
+                <a href="#">Catalog</a>
+                <a href="../contact/contact.php">Contact</a>
+                <a href="../Abou_us/about_us.html">About Us</a>
+                
 
-    <a href="../Login page/user_login.html" class="btn login">Login</a>
-    <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
-  </nav>
+                <a href="../Login/user_login.php" class="btn login">Login</a>
+                <a href="../Register/register.php" class="btn signup">Sign Up</a>
+            </nav>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+     </header>
 
 <!-- Our Mission Section -->
 <section class="mission">
@@ -120,31 +120,31 @@
     <div class="team-container">
 
         <div class="team-card">
-            <img src="../Pictures/Kalhara.jpeg" alt="Margaret Chen">
+            <img src="../Pictures/Kalhara2.jpeg" >
             <h3>Nadeesha Kalhara</h3>
             <p>Head Librarian</p>
         </div>
 
         <div class="team-card">
-            <img src="../Pictures/Dayashan.jpeg" alt="James Okafor">
+            <img src="../Pictures/Dayashan.jpeg" >
             <h3>Dayashan Chamuditha</h3>
             <p>Collections Manager</p>
         </div>
 
         <div class="team-card">
-            <img src="../Pictures/Dasun.jpeg" alt="Sarah Williams">
+            <img src="../Pictures/Dasun.jpeg" >
             <h3>Dasun Kavinda</h3>
             <p>Youth Programs Director</p>
         </div>
 
         <div class="team-card">
-            <img src="../Pictures/Prabasha.jpeg" alt="David Park">
+            <img src="../Pictures/Prabasha.jpeg" >
             <h3>Prabasha Pasindu</h3>
             <p>Digital Services Lead</p>
         </div>
 
         <div class="team-card">
-            <img src="images/team4.jpg" alt="David Park">
+            <img src="../Pictures/ishan.jpg" >
             <h3>Ishan</h3>
             <p>Digital Services Lead</p>
         </div>
@@ -164,18 +164,18 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
-                        <li><a href="../Home/Main.html">Home</a></li>
+                        <li><a href="../User_details/user_detail.php">User Profile</a></li>    
+                        <li><a href="../Home/index.php">Home</a></li>
                         <li><a href="#">Book Catalog</a></li>
-                        <li><a href="../contact us/contact.html">Contact</a></li>
+                        <li><a href="../contact/contact.php">Contact</a></li>
                         <li><a href="../Abou_us/about_us.html">About Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Account</h3>
                     <ul>
-                        <li><a href="../Login page/user_login.html">Log In</a></li>
-                        <li><a href="../Register/user_register.html">Sign Up</a></li>
+                        <li><a href="../Login/user_login.php">Log In</a></li>
+                        <li><a href="../Register/register.php">Sign Up</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -188,7 +188,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>OpenLib. All rights reserved.</p>
+                <p>PageTurn Library. All rights reserved.</p>
             </div>
         </div>
     </footer>
