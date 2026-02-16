@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register Form</title>
-  <link rel="stylesheet" href="user_register.css">
+  <link rel="stylesheet" href="register.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -12,7 +12,7 @@
   <div class="wrapper">
   
 
-    <form action="user_register.php" method="POST" autocomplete="off" onsubmit=" return checkPassword()" >
+    <form action="register.php" method="POST" autocomplete="off" onsubmit=" return checkPassword()" >
       <h1>Register</h1>
       <div class="input-box">
         <input type="text" placeholder="First Name" name="f_name" required>
@@ -45,7 +45,7 @@
       <button type="submit" class="btn" name= "submit" >Create Account</button>
 
       <div class="register-link">
-        <p>Already have an account? <a href="../Login page/user_login.html">Login</a></p>
+        <p>Already have an account? <a href="../Login/user_login.php">Login</a></p>
       </div>
     
       <div id= "alert"></div>
