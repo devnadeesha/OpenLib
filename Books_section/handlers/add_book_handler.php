@@ -50,15 +50,14 @@ if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] == 0) {
 // INSERT INTO DATABASE
 // ============================
 
-$sql = "INSERT INTO books 
-(title, author, isbn, genre, publication_year, pages, publisher, quantity, available_quantity, description, cover_image)
+$sql = "INSERT INTO books(title, author, isbn, genre, publication_year, pages, publisher, quantity, available_quantity, description, cover_image)
 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-$stmt = $conn->prepare($sql);
+// $stmt = $conn->prepare($sql); meka dannae owata berenna  ❌ SQL Injection ❌ Hackers inserting malicious SQL
 
 $available_quantity = $quantity;
 
-$stmt->bind_param(
+/*$stmt->bind_param(
     "ssssiiisiss",
     $title,
     $author,
@@ -72,13 +71,15 @@ $stmt->bind_param(
     $description,
     $cover_image
 );
-
-if ($stmt->execute()) {
+*/
+//            👀😎   -----mama nikan sql nikan run wenna dunna  meka prevent karanna ona na --------
+if ($conn->query($sql)) {
     echo "Book Added Successfully!";
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Error: " . $conn->error;
 }
 
-$stmt->close();
 $conn->close();
+//$stmt->close();
+
 ?>
