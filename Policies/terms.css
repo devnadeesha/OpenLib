@@ -1,0 +1,82 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../Pictures/library1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.terms-container{
+  width: 420px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.406);
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 30px 40px;
+}
+
+.terms-container h2 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.terms-container p {
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.checkbox-group {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.checkbox-group input {
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+.btn-group {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.agree-btn, .decline-btn {
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.agree-btn {
+  background: #28a745;
+  color: #fff;
+}
+
+.decline-btn {
+  background: #dc3545;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.agree-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.agree-btn:hover:not(:disabled) {
+  background: #218838;
+}
+
+.decline-btn:hover {
+  background: #c82333;
+}
