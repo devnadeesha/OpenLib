@@ -19,8 +19,8 @@
     <a href="../Abou_us/about_us.html">About Us</a>
     
 
-    <a href="../Login/user_login.php" class="btn login">Login</a>
-    <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
+    <a href="../Login/user_login.php" class="btn login">Logout</a>
+    
   </nav>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -58,7 +58,7 @@
       <div class="dashboard-card">
         <h2>Quick Actions</h2>
         <div class="action-buttons">
-          <a href="#" class="btn">Add New Book</a>
+          <a href="../Books_section/addnewBooks/add-book.php" class="btn">Add New Book</a><!--mama methna path eka dunna :) page ekata redirect wenawada balapan :)-->
           <a href="#" class="btn">View Catalog</a>
           <a href="#" class="btn">Manage Users</a>
           <a href="#" class="btn">Borrow History</a>
