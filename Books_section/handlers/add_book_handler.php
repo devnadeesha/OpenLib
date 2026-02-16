@@ -1,6 +1,6 @@
 
 <?php
-// ADD BOOK HANDLER - PHP/MySQL Integration
+// ADD BOOK HANDLER - PHP/MySQL Integration with Image Upload
 session_start();
 header('Content-Type: application/json');
 
@@ -17,9 +17,21 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+// Create uploads directory if it doesn't exist
+$uploads_dir = '../uploads/books';
+if (!is_dir($uploads_dir)) {
+    mkdir($uploads_dir, 0755, true);
+}
+
 try {
-    // Get JSON data from request
-    $input = json_decode(file_get_contents('php://input'), true);
+    // Check if form data or JSON
+    $input = [];
+    
+    if (!empty($_POST)) {
+        $input = $_POST;
+    } else {
+        $input = json_decode(file_get_contents('php://input'), true);
+    }
 
     // Validate required fields
     $required_fields = ['title', 'author', 'isbn', 'genre', 'year', 'pages', 'quantity'];
@@ -27,6 +39,40 @@ try {
         if (empty($input[$field])) {
             throw new Exception("Missing required field: $field");
         }
+    }
+    
+    // Handle image upload
+    $cover_image_path = '';
+    if (isset($_FILES['cover_image']) && $_FILES['cover_image']['error'] !== UPLOAD_ERR_NO_FILE) {
+        $file = $_FILES['cover_image'];
+        
+        // Validate file
+        $allowed_types = ['image/jpeg', 'image/png', 'image/webp'];
+        if (!in_array($file['type'], $allowed_types)) {
+            throw new Exception("Invalid image type. Allowed: JPG, PNG, WebP");
+        }
+        
+        // Validate file size (5MB max)
+        if ($file['size'] > 5 * 1024 * 1024) {
+            throw new Exception("Image file is too large. Maximum 5MB allowed");
+        }
+        
+        // Validate file error
+        if ($file['error'] !== UPLOAD_ERR_OK) {
+            throw new Exception("Error uploading file");
+        }
+        
+        // Generate unique filename
+        $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+        $filename = uniqid('book_') . '.' . $extension;
+        $filepath = $uploads_dir . '/' . $filename;
+        
+        // Move file to uploads directory
+        if (!move_uploaded_file($file['tmp_name'], $filepath)) {
+            throw new Exception("Failed to save image file");
+        }
+        
+        $cover_image_path = 'uploads/books/' . $filename;
     }
 
     // Sanitize and validate input
@@ -74,14 +120,14 @@ try {
 
     // Insert book into database
     $insert_book = $conn->prepare(
-        "INSERT INTO books (title, author, isbn, genre, publication_year, pages, publisher, quantity, available_quantity, description, added_date)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())"
+        "INSERT INTO books (title, author, isbn, genre, publication_year, pages, publisher, quantity, available_quantity, description, cover_image, added_date)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())"
     );
 
     $available_quantity = $quantity; // Initially all books are available
 
     $insert_book->bind_param(
-        "ssssiiisss",
+        "ssssiisssss",
         $title,
         $author,
         $isbn,
@@ -91,7 +137,8 @@ try {
         $publisher,
         $quantity,
         $available_quantity,
-        $description
+        $description,
+        $cover_image_path
     );
 
     if (!$insert_book->execute()) {
