@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add New Book | OpenLib</title>
-  <link rel="stylesheet" href="../../assets/dashboard.css">
-  <link rel="stylesheet" href="../../assets/add-book.css">
+  <link rel="stylesheet" href="../assets/add-book.css">
+  <link rel="stylesheet" href="../assets/dashboard.css">
 </head>
 <body>
 
