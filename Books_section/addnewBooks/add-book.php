@@ -191,6 +191,6 @@
   </div>
 </footer>
 
-<script src="../../assets/add-book.js"></script>
+<script src="../assets/add-book.js"></script>
 </body>
 </html>
