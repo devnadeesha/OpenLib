@@ -60,12 +60,12 @@
     }
 
     function acceptTerms() {
-      window.location.href = "../Home/Main.html"; // change to your dashboard page
+      window.location.href = "../Login/user_login.php"; // change to your dashboard page
     }
 
     function declineTerms() {
       alert("You must accept the terms to continue using the system.");
-      window.location.href = "../Register/user_register.html"; // change to your register page
+      window.location.href = "../Register/register.php"; // change to your register page
     }
   </script>
 
