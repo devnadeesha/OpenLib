@@ -1,10 +1,3 @@
-<?php
-require_once '../Books_section/handlers/add_book_handler.php';
-
-$sql = "SELECT * FROM books";
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -141,3 +134,4 @@ $result = $conn->query($sql);
   <script src="../admin_catlog/assets/view-catalog.js"></script>
 </body>
 </html>
+
