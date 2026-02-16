@@ -72,16 +72,54 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-/*
+ 
 -------------------- Books Section -------------------------------
 
 
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    author VARCHAR(100) NOT NULL,
+    isbn VARCHAR(50) NOT NULL,
+    genre VARCHAR(50) NOT NULL,
+    publication_year INT NOT NULL,
+    pages INT NOT NULL,
+    publisher VARCHAR(100),
+    quantity INT NOT NULL,
+    available_quantity INT NOT NULL,
+    description TEXT,
+    cover_image VARCHAR(255),
+    added_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+
+);
+
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(20) DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE borrow_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    book_id INT,
+    borrow_date DATE,
+    return_date DATE,
+    status VARCHAR(20) DEFAULT 'borrowed',
+
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
+);
 
 
 
 
 
 
-
-*/
+ /*End of book Section*/
 
