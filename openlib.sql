@@ -89,7 +89,10 @@ CREATE TABLE books (
     available_quantity INT NOT NULL,
     description TEXT,
     cover_image VARCHAR(255),
-    added_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    added_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('Available','Borrowed') DEFAULT 'Available' /*edited i add a clolumn */
+);
+
 
 
 );
@@ -120,11 +123,6 @@ CREATE TABLE borrow_records (
 
 
 
-
- /*End of book Section*/
-
-/*admin catlog tika thamai me --------------*/
-
-
-
+ALTER TABLE books 
+ADD COLUMN status ENUM('Available','Borrowed') DEFAULT 'Available';
 
