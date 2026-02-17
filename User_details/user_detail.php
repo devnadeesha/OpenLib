@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | OpenLib</title>
+  <title>User Details | OpenLib</title>
   <link rel="stylesheet" href="user_detail.css">
 </head>
 <body>

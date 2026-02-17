@@ -111,18 +111,6 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2 class="cta-title">Ready to Start Reading?</h2>
-            <p class="cta-description">Create a free account today and gain access to our entire catalog. Borrow books, save favorites, and join our reading community.</p>
-            <div class="cta-buttons">
-                <a href="/register" class="btn btn-primary">Create Free Account</a>
-                <a href="/catalog" class="btn btn-outline">Browse Catalog</a>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
    <footer class="footer">
         <div class="container">
