@@ -107,14 +107,19 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Borrow Records Table
 CREATE TABLE borrow_records (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    book_id INT,
-    borrow_date DATE,
-    return_date DATE,
-    status VARCHAR(20) DEFAULT 'borrowed',
-
+    user_id INT NOT NULL,
+    book_id INT NOT NULL,
+    borrow_date DATE NOT NULL,
+    due_date DATE NOT NULL,
+    return_date DATE NULL,
+    status ENUM('borrowed', 'returned', 'overdue') DEFAULT 'borrowed',
+    fine_amount DECIMAL(10,2) DEFAULT 0.00,
+    notes TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
 );
@@ -123,6 +128,11 @@ CREATE TABLE borrow_records (
 
 
 
-ALTER TABLE books 
-ADD COLUMN status ENUM('Available','Borrowed') DEFAULT 'Available';
+
+ /*End of book Section*/
+
+/*admin catlog tika thamai me uda tikama books :)--------------*/
+
+
+
 

@@ -58,9 +58,9 @@
       <div class="dashboard-card">
         <h2>Quick Actions</h2>
         <div class="action-buttons">
-          <a href="../Books_section/addnewBooks/add-book.php" class="btn">Add New Book</a><!--mama methna path eka dunna :) page ekata redirect wenawada balapan :)-->
+          <a href="../Manage_books/add_book.php" class="btn">Add New Book</a><!--mama methna path eka dunna :) page ekata redirect wenawada balapan :)-->
           <a href="#" class="btn">View Catalog</a>
-          <a href="#" class="btn">Manage Users</a>
+          <a href="../Manage_members/manage_members.php" class="btn">Manage Users</a>
           <a href="#" class="btn">Borrow History</a>
         </div>
       </div>
