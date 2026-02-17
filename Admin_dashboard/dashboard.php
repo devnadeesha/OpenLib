@@ -61,7 +61,7 @@
           <a href="../Manage_books/add_book.php" class="btn">Add New Book</a><!--mama methna path eka dunna :) page ekata redirect wenawada balapan :)-->
           <a href="#" class="btn">View Catalog</a>
           <a href="../Manage_members/manage_members.php" class="btn">Manage Users</a>
-          <a href="#" class="btn">Borrow History</a>
+          <a href="../Borrow_history/borrow_history.php" class="btn">Borrow History</a>
         </div>
       </div>
 
