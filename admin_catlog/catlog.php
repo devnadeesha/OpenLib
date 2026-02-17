@@ -13,11 +13,11 @@
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
-    <a href="#">Catalog</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
+    <a href="../Admin_dashboard/dashboard.php">Dashboard</a>
+    <a href="../Home/index.php">Home</a>
+    <a href="./catlog.php">Catalog</a>
+    <a href="../Contact us/Contact.html">Contact</a>
+    <a href="../About us/About us.php">About Us</a>
     
 
     <a href="../Login/user_login.php" class="btn login">Logout</a>
