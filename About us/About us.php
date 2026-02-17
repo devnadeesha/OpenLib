@@ -14,10 +14,10 @@
             <nav class="navbar" id="navMenu">
                 <a href="../User_details/user_detail.php">User Profile</a>
                 <a href="../Home/index.php">Home</a>
-                <a href="#">Catalog</a>
+                <a href="../User_catalog/user_catalog.php">Catalog</a>
                 <a href="../contact/contact.php">Contact</a>
-                <a href="../Abou_us/about_us.html">About Us</a>
-                
+                <a href="../About us/About us.php">About Us</a>
+
 
                 <a href="../Login/user_login.php" class="btn login">Login</a>
                 <a href="../Register/register.php" class="btn signup">Sign Up</a>
@@ -166,9 +166,9 @@
                     <ul>
                         <li><a href="../User_details/user_detail.php">User Profile</a></li>    
                         <li><a href="../Home/index.php">Home</a></li>
-                        <li><a href="#">Book Catalog</a></li>
+                        <li><a href="../User_catalog/user_catalog.php">Book Catalog</a></li>
                         <li><a href="../contact/contact.php">Contact</a></li>
-                        <li><a href="../Abou_us/about_us.html">About Us</a></li>
+                        <li><a href="../About us/About us.php">About Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
