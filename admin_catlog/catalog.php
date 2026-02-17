@@ -136,8 +136,7 @@ $badgeMap = ['Programming'=>'badge-prog','Fiction'=>'badge-fic','Science'=>'badg
             <td><?= htmlspecialchars($b['author']) ?></td>
             <td><span class="badge <?= $bc ?>"><?= htmlspecialchars($b['genre']) ?></span></td>
             <td><?= htmlspecialchars($b['isbn']) ?></td>
-            <td><span class="status <?= $sc ?>"><?= htmlspecialchars($b['status']) ?></span></td>
-            <td class="actions">
+      <td><span class="status <?= $sc ?>"><?= isset($b['status']) ? htmlspecialchars($b['status']) : 'Available' ?></span></td>            <td class="actions">
 <button class="btn-edit" onclick='openEditModal(<?= $b["id"] ?>,"<?= htmlspecialchars($b["title"], ENT_QUOTES) ?>","<?= htmlspecialchars($b["author"], ENT_QUOTES) ?>","<?= htmlspecialchars($b["genre"], ENT_QUOTES) ?>","<?= htmlspecialchars($b["isbn"], ENT_QUOTES) ?>","<?= isset($b["status"]) ? htmlspecialchars($b["status"], ENT_QUOTES) : "Available" ?>")'>Edit</button>              <form method="POST" style="display:inline" onsubmit="return confirm('Delete this book?')">
                 <input type="hidden" name="action" value="delete">
                 <input type="hidden" name="id" value="<?= $b['id'] ?>">
