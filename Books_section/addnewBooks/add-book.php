@@ -162,18 +162,18 @@
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="dashboard.html">Dashboard</a></li>    
-          <li><a href="index.html">Home</a></li>
-          <li><a href="catalog.html">Book Catalog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="../../Admin_dashboard/dashboard.php">Dashboard</a></li>    
+          <li><a href="../../Home/index.php">Home</a></li>
+          <li><a href="../../admin_catlog/catlog.php">Book Catalog</a></li>
+          <li><a href="../../contact/contact.php">Contact</a></li>
+          <li><a href="../../About us/About us.php">About Us</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h3>Account</h3>
         <ul>
-          <li><a href="login.html">Log In</a></li>
-          <li><a href="register.html">Sign Up</a></li>
+          <li><a href="../../Login/user_login.php">Log In</a></li>
+          <li><a href="../../Register/register.php">Sign Up</a></li>
         </ul>
       </div>
       <div class="footer-column">
