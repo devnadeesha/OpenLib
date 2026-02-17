@@ -14,9 +14,9 @@
             <nav class="navbar" id="navMenu">
                 <a href="../User_details/user_detail.php">User Profile</a>
                 <a href="../Home/index.php">Home</a>
-                <a href="#">Catalog</a>
+                <a href="../admin_catlog/catlog.php">Catalog</a>
                 <a href="../contact/contact.php">Contact</a>
-                <a href="../Abou_us/about_us.html">About Us</a>
+                <a href="../About us/About us.php">About Us</a>
                 
 
                 <a href="../Login/user_login.php" class="btn login">Login</a>

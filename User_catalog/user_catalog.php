@@ -1,3 +1,19 @@
+
+<!-- catalog -->
+
+
+
+
+
+<?php
+$conn = new mysqli("localhost","root","","library_db");
+
+$search = $_GET['search'] ?? '';
+
+$sql = "SELECT * FROM books WHERE book_name LIKE '%$search%' OR author LIKE '%$search%'";
+$books = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,11 +40,29 @@
             </nav>
 
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-     </header>
-<!-- catalog -->
- 
+     </header> 
+<section class="catalog">
 
+  <?php while($row = $books->fetch_assoc()){ ?>
 
+  <div class="book-card">
+    <img src="<?php echo $row['cover']; ?>">
+    <h3><?php echo $row['book_name']; ?></h3>
+    <p><?php echo $row['author']; ?></p>
+    <span class="cat"><?php echo $row['category']; ?></span>
+
+    <div class="status <?php echo $row['status']; ?>">
+      <?php echo ucfirst($row['status']); ?>
+    </div>
+
+    <button class="btn" <?php if($row['status']=="borrowed") echo "disabled"; ?>>
+      <?php echo $row['status']=="available" ? "Borrow" : "Not Available"; ?>
+    </button>
+  </div>
+
+  <?php } ?>
+
+</section>
 
 <footer class="footer">
         <div class="container">
@@ -70,5 +104,47 @@
     </footer>
 
 <script src="contact.js"></script>
+<footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <a href="/" class="footer-logo">OpenLib</a>
+                    <p class="footer-description">Your gateway to knowledge. Explore thousands of books and join our vibrant reading community.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../User_details/user_detail.php">User Profile</a></li>    
+                        <li><a href="../Home/index.php">Home</a></li>
+                        <li><a href="../User_catalog/user_catalog.php">Catalog</a></li>
+                        <li><a href="../contact/contact.php">Contact</a></li>
+                        <li><a href="../About us/About us.php">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="../Login/user_login.php">Log In</a></li>
+                        <li><a href="../Register/register.php">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Library Hours</h3>
+                    <ul>
+                        <li>Mon - Fri: 8:00 AM - 9:00 PM</li>
+                        <li>Saturday: 9:00 AM - 6:00 PM</li>
+                        <li>Sunday: 10:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>PageTurn Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
+ 
