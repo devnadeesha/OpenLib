@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,3 +113,83 @@
 </body>
 </html>
  
+<?php
+session_start();
+
+// Database connection
+$conn = mysqli_connect("localhost","root","","openlib");
+
+if(!$conn){
+    die("Database Connection Failed");
+}
+
+// Temporary user id (later login session eken ganna)
+$user_id = 1;
+
+// Fetch user data
+$user_sql = "SELECT * FROM user WHERE id='$user_id'";
+$user_result = mysqli_query($conn,$user_sql);
+$user = mysqli_fetch_assoc($user_result);
+
+// Fetch taken books
+$book_sql = "SELECT * FROM borrowed_books WHERE user_id='$user_id'";
+$book_result = mysqli_query($conn,$book_sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details | OpenLib</title>
+  <link rel="stylesheet" href="user_detail.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Open<span>Lib</span></div>
+</header>
+
+<div class="container">
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <img src="uploads/<?php echo $user['photo']; ?>" alt="User Photo">
+
+    <h2><?php echo $user['name']; ?></h2>
+    <p><?php echo $user['email']; ?></p>
+
+    <div class="info">
+      <div><b>Library Code:</b> <?php echo $user['library_code']; ?></div>
+      <div><b>Fines:</b> Rs. <?php echo $user['fines']; ?></div>
+    </div>
+
+    <a href="../User_details/edit_detail/edit_detail.php" class="btn">Edit Profile</a>
+  </div>
+
+  <!-- Books Section -->
+  <div class="books-card">
+    <h3>📚 Taken Books</h3>
+
+    <table>
+      <tr>
+        <th>Book Name</th>
+        <th>Borrow Date</th>
+        <th>Return Date</th>
+      </tr>
+
+      <?php while($row = mysqli_fetch_assoc($book_result)){ ?>
+      <tr>
+        <td><?php echo $row['book_name']; ?></td>
+        <td><?php echo $row['borrow_date']; ?></td>
+        <td><?php echo $row['return_date']; ?></td>
+      </tr>
+      <?php } ?>
+
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -89,7 +89,10 @@ CREATE TABLE books (
     available_quantity INT NOT NULL,
     description TEXT,
     cover_image VARCHAR(255),
-    added_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    added_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('Available','Borrowed') DEFAULT 'Available' /*edited i add a clolumn */
+);
+
 
 
 );
@@ -110,17 +113,15 @@ CREATE TABLE borrow_records (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
-    INDEX idx_user_id (user_id),
-    INDEX idx_book_id (book_id),
-    INDEX idx_status (status),
-    INDEX idx_borrow_date (borrow_date)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+    FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
+);
 
--- Sample data for testing
--- INSERT INTO borrow_records (user_id, book_id, borrow_date, due_date, status) VALUES
--- (1, 1, '2025-02-01', '2025-02-15', 'borrowed'),
--- (1, 2, '2025-01-15', '2025-01-29', 'returned');
+
+
+
+
+
+ /*End of book Section*/
 
 /*admin catlog tika thamai me uda tikama books :)--------------*/
 
