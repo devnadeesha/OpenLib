@@ -13,14 +13,14 @@
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="dashboard.html">Dashboard</a>
-    <a href="index.html">Home</a>
-    <a href="catalog.html">Catalog</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About Us</a>
+    <a href="../../Admin_dashboard/dashboard.php">Dashboard</a>
+    <a href="../../Home/index.php">Home</a>
+    <a href="../../admin_catlog/catlog.php">Catalog</a>
+    <a href="../../contact/contact.php">Contact</a>
+    <a href="../../About us/About us.php">About Us</a>
     
-    <a href="login.html" class="btn login">Login</a>
-    <a href="register.html" class="btn signup">Sign Up</a>
+    <a href="../../Login/user_login.php" class="btn login">Login</a>
+    <a href="../../Register/register.php" class="btn signup">Sign Up</a>
   </nav>
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>

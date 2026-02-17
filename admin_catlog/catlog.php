@@ -20,7 +20,7 @@
     <a href="../About us/About us.php">About Us</a>
     
 
-    <a href="../Login/user_login.php" class="btn login">Logout</a>
+    <a href="../Login/user_login.php" class="btn login">Logout</a> <!--KO  LOGOUT EKA -->
     
   </nav>
 
