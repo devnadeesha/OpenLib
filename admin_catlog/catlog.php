@@ -1,10 +1,3 @@
-<?php
-require_once '../Books_section/handlers/add_book_handler.php';
-
-$sql = "SELECT * FROM books";
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,14 +13,14 @@ $result = $conn->query($sql);
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
-    <a href="#">Catalog</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
+    <a href="../Admin_dashboard/dashboard.php">Dashboard</a>
+    <a href="../Home/index.php">Home</a>
+    <a href="./catlog.php">Catalog</a>
+    <a href="../Contact us/Contact.html">Contact</a>
+    <a href="../About us/About us.php">About Us</a>
     
 
-    <a href="../Login/user_login.php" class="btn login">Logout</a>
+    <a href="../Login/user_login.php" class="btn login">Logout</a> <!--KO  LOGOUT EKA -->
     
   </nav>
 
@@ -109,18 +102,18 @@ $result = $conn->query($sql);
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
-                        <li><a href="../Home/Main.html">Home</a></li>
-                        <li><a href="#">Book Catalog</a></li>
-                        <li><a href="../contact us/contact.html">Contact</a></li>
-                        <li><a href="../Abou_us/about_us.html">About Us</a></li>
+                        <li><a href="../Admin_dashboard/dashboard.php">Dashboard</a></li>    
+                        <li><a href="../Home/index.php">Home</a></li>
+                        <li><a href="../admin_catlog/catlog.php">Book Catalog</a></li>
+                        <li><a href="../contact/contact.php">Contact</a></li>
+                        <li><a href="../About us/About us.php">About Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Account</h3>
                     <ul>
-                        <li><a href="../Login page/user_login.html">Log In</a></li>
-                        <li><a href="../Register/user_register.html">Sign Up</a></li>
+                        <li><a href="../Login/user_login.php">Log In</a></li>
+                        <li><a href="../Register/register.php">Sign Up</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -141,3 +134,4 @@ $result = $conn->query($sql);
   <script src="../admin_catlog/assets/view-catalog.js"></script>
 </body>
 </html>
+

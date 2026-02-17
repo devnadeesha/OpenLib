@@ -123,7 +123,7 @@ CREATE TABLE borrow_records (
 
  /*End of book Section*/
 
-/*admin catlog tika thamai me --------------*/
+/*admin catlog tika thamai me uda tikama books :)--------------*/
 
 
 
