@@ -75,12 +75,12 @@ $badgeMap = ['Programming'=>'badge-prog','Fiction'=>'badge-fic','Science'=>'badg
 <header class="header">
   <div class="logo">Open<span>Lib</span></div>
   <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.php">Dashboard</a>
-    <a href="../Home/Main.php">Home</a>
-    <a href="catalog.php" class="active">Catalog</a>
-    <a href="../contact us/contact.php">Contact</a>
-    <a href="../Abou_us/about_us.php">About Us</a>
-    <a href="../Login/user_login.php" class="btn login">Logout</a>
+    <a href="../Admin_dashboard/dashboard.php">Dashboard</a>
+    <a href="../Home/index.php">Home</a>
+    <a href="../admin_catlog/catalog.php" class="active">Catalog</a>
+    <a href="../contact/contact.php">Contact</a>
+    <a href="../About us/About us.php">About Us</a>
+    <a href="../Register/register.php" class="btn login">Logout</a>
   </nav>
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
