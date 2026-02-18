@@ -93,8 +93,8 @@ unset($_SESSION['errors'], $_SESSION['form_data']);
   <link rel="stylesheet" href="register.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
   <div class="wrapper">
     <form action="register.php" method="POST" autocomplete="off" onsubmit="return checkPassword()">
       <h1>Register</h1>

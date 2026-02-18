@@ -99,7 +99,10 @@ $conn->close();
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-
+  <div class= "welcome-text">
+    <p class="p1">Welcome</p>
+    <p class="p2">to <span class="span1">Open</span><span>Lib</span></p>
+  </div>
   <div class="wrapper">
     <form action="user_login.php" method="POST" autocomplete="off">
       <h1>Login</h1>
