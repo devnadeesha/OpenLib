@@ -1,19 +1,20 @@
 <?php
-// Database configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');  // Change this to your database username
-define('DB_PASS', '');      // Change this to your database password
-define('DB_NAME', 'openlib');  // Change this to your database name
+// db_connect.php
 
-// Create connection
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$host   = 'localhost';
+$dbname = 'openlib';  // ← Changed from 'openlib_db' to match your existing database
+$user   = 'root';
+$pass   = '';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass, [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    ]);
+} catch (PDOException $e) {
+    die("<p style='color:red;padding:20px;font-family:sans-serif;'>
+        ❌ Database connection failed: " . htmlspecialchars($e->getMessage()) . "
+        <br>Check your db_connect.php settings.
+    </p>");
 }
-
-// Set charset to utf8mb4 for proper character encoding
-$conn->set_charset("utf8mb4");
-
 ?>
