@@ -30,17 +30,25 @@
 <div class="container">
 
   <!-- Profile Card -->
-  <div class="profile-card">
-    <img src="user.jpg" alt="User Photo">
-    <h2>Nadeesha Kalhara</h2>
-    <p>nadeesha@gmail.com</p>
+  <div class="contact-container">
+    <form>
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
 
-    <div class="info">
-      <div><b>Library Code:</b> LIB1023</div>
-      <div><b>Fines:</b> Rs. 150.00</div>
-    </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
 
-    <a href="../User_details/edit_detail/edit_detail.php" class="btn">Edit Profile</a>
+            <div class="input-group">
+                <label>Message</label>
+                <textarea rows="4" placeholder="Type your message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-msg">Send Message</button>
+        </form>
   </div>
 
   <!-- Books Section -->

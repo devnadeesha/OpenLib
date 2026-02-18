@@ -95,8 +95,6 @@ CREATE TABLE books (
 
 
 
-);
-
 
 
 -- Borrow Records Table
