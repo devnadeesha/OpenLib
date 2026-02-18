@@ -5,9 +5,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  padding: 200px;
   align-items: center;
   min-height: 100vh;
   background: url(../Pictures/realistic-books-shelf-library.jpg) no-repeat;
