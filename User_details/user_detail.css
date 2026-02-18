@@ -59,6 +59,7 @@ body {
   background: #1abc9c;
 }
 
+<<<<<<< HEAD
 .btn-nav {
   padding: 6px 14px;
   border-radius: 5px;
@@ -66,11 +67,24 @@ body {
 }
 
 .menu-toggle {
+=======
+.logout{
+  background: #1abc9c;
+  color: #000;
+}
+.logout:hover{
+  background: #ffffff;
+ 
+}
+
+.menu-toggle{
+>>>>>>> 8ef47c2ef4cc1bc8e2b7c32dda01a290b3cf3bbf
   display: none;
   font-size: 26px;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* CONTAINER */
 .container {
   max-width: 1400px;
@@ -589,6 +603,60 @@ body {
 .no-fine {
   color: #999;
 }
+=======
+
+.profile-card{
+  width:380px;
+  margin:50px auto;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-header{
+  background:linear-gradient(135deg,#4e54c8,#8f94fb);
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+
+.profile-header img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:4px solid white;
+  object-fit:cover;
+  margin-bottom:10px;
+}
+
+.profile-body{
+  padding:20px;
+}
+
+.profile-body p{
+  margin:6px 0;
+  font-size:15px;
+}
+
+.profile-body h3{
+  margin-top:15px;
+  font-size:17px;
+  border-bottom:1px solid #ddd;
+  padding-bottom:5px;
+}
+
+.profile-body ul{
+  padding-left:18px;
+}
+
+.profile-body li{
+  margin:6px 0;
+  font-size:14px;
+}
+
+
+>>>>>>> 8ef47c2ef4cc1bc8e2b7c32dda01a290b3cf3bbf
 
 /* FOOTER */
 .footer {
@@ -721,6 +789,7 @@ body {
   .footer-column ul li a:hover {
     padding-left: 0;
   }
+<<<<<<< HEAD
 
   .history-table {
     font-size: 12px;
@@ -731,3 +800,6 @@ body {
     padding: 8px;
   }
 }
+=======
+}
+>>>>>>> 8ef47c2ef4cc1bc8e2b7c32dda01a290b3cf3bbf

@@ -92,13 +92,14 @@ body{
   border-radius: 5px;
 }
 
-.login{
-  border: 1px solid #1abc9c;
-}
+.logout{
 
-.signup{
   background: #1abc9c;
   color: #000;
+}
+.logout:hover{
+  background: #ffffff;
+ 
 }
 
 .menu-toggle{

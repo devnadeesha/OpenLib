@@ -7,14 +7,42 @@
 
 body {
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  padding: 200px;
   align-items: center;
   min-height: 100vh;
-  background: url(../Pictures/library1.jpg) no-repeat;
+  background: url(../Pictures/realistic-books-shelf-library.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
+.welcome-text {
+  position: absolute;
+  left: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: right;
 
+}
+.welcome-text .p1 {
+  line-height: 1.2;
+  font-size: 100px;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.welcome-text .p2 {
+  line-height: 1.2;
+  font-size: 50px;
+  
+}
+.welcome-text .p2 span {
+  color: #1abc9c;
+  font-weight: bold;
+}
+.welcome-text .p2 span.span1 {
+  color: #ffffff;
+  font-weight: bold;
+}
 .wrapper {
   width: 420px;
   background: rgba(255, 255, 255, 0.1);
