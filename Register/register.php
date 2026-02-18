@@ -95,6 +95,10 @@ unset($_SESSION['errors'], $_SESSION['form_data']);
 </head>
 
 <body>
+  <div class= "welcome-text">
+    <p class="p1">Welcome</p>
+    <p class="p2">to <span class="span1">Open</span><span>Lib</span></p>
+  </div>
   <div class="wrapper">
     <form action="register.php" method="POST" autocomplete="off" onsubmit="return checkPassword()">
       <h1>Register</h1>
