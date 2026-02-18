@@ -27,6 +27,43 @@
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
      </header> 
 
+  <div class="profile-card">
+
+  <div class="profile-header">
+    <img src="user.png" alt="User Photo" id="userPic">
+    <h2 id="name">Loading...</h2>
+    <p id="email"></p>
+  </div>
+
+  <div class="profile-body">
+    <p><b>Library Code:</b> <span id="lib"></span></p>
+    <p><b>Fines:</b> Rs. <span id="fines"></span></p>
+
+    <h3>Borrowed Books</h3>
+    <ul id="books"></ul>
+  </div>
+
+</div>
+
+<script>
+fetch("https://yourapiurl.com/getUserProfile?id=123")
+.then(res => res.json())
+.then(data => {
+
+  document.getElementById("name").innerText = data.name;
+  document.getElementById("email").innerText = data.email;
+  document.getElementById("lib").innerText = data.library_code;
+  document.getElementById("fines").innerText = data.fines;
+
+  let list = "";
+  data.books.forEach(book => {
+    list += `<li>${book}</li>`;
+  });
+
+  document.getElementById("books").innerHTML = list;
+
+});
+</script>
 
 <footer class="footer">
         <div class="container">
