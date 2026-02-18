@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 session_start();
 
@@ -75,15 +74,12 @@ foreach ($borrowed_books as $book) {
     }
 }
 ?>
-=======
->>>>>>> 8ef47c2ef4cc1bc8e2b7c32dda01a290b3cf3bbf
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
   <title>My Profile | OpenLib</title>
   <link rel="stylesheet" href="user_detail.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -94,15 +90,18 @@ foreach ($borrowed_books as $book) {
 <header class="header">
   <div class="logo">Open<span>Lib</span></div>
 
-  <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
-    <a href="../Borrow/borrow_books.php">Borrow Books</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
-    <a href="user_profile.php" class="active">My Profile</a>
-    <a href="../Login/user_login.php" class="btn-nav">Logout</a>
-  </nav>
+     <nav class="navbar" id="navMenu">
+                <a href="../User_details/user_detail.php">User Profile</a>
+                <a href="../Home/index.php">Home</a>
+                <a href="../User_catalog/user_catalog.php">Catalog</a>
+                <a href="../contact/contact.php">Contact</a>
+                <a href="../About us/About us.php">About Us</a>
+                
+
+                <a href="../Login/user_login.php" class="btn logout">Logout</a>
+               
+            </nav>
+
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
@@ -166,7 +165,7 @@ foreach ($borrowed_books as $book) {
       </div>
 
       <div class="profile-actions">
-        <a href="../User_details/edit_detail/edit_profile.php" class="btn-primary">
+        <a href="./edit_detail/edit_profile.php" class="btn-primary">
           <i class='bx bx-edit'></i> Edit Profile
         </a>
       </div>
@@ -218,7 +217,7 @@ foreach ($borrowed_books as $book) {
           <div class="empty-state">
             <i class='bx bx-book'></i>
             <p>You haven't borrowed any books yet.</p>
-            <a href="../Borrow_books/borrow_books.php" class="btn-link">Borrow Books</a>
+            <a href="../Borrow_books/borrow_books.php" class="btn-link">Borrow Book</a>
           </div>
         <?php else: ?>
           <div class="books-list">
@@ -327,7 +326,7 @@ foreach ($borrowed_books as $book) {
         <ul>
           <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
           <li><a href="../Home/Main.html">Home</a></li>
-          <li><a href="../Borrow/borrow_books.php">Borrow Books</a></li>
+          <li><a href="../Borrow_books/borrow_books.php">Borrow Books</a></li>
           <li><a href="../contact us/contact.html">Contact</a></li>
           <li><a href="../Abou_us/about_us.html">About Us</a></li>
         </ul>
@@ -363,110 +362,3 @@ function toggleMenu() {
 </script>
 </body>
 </html>
-=======
-  <title>User Details | OpenLib</title>
-   <link rel="stylesheet" href="user_detail.css">
-</head>
-<body>
-
-<header class="header">
-        <div class="logo">Open<span>Lib</span></div>
-
-            <nav class="navbar" id="navMenu">
-                <a href="../User_details/user_detail.php">User Profile</a>
-                <a href="../Home/index.php">Home</a>
-                <a href="../User_catalog/user_catalog.php">Catalog</a>
-                <a href="../contact/contact.php">Contact</a>
-                <a href="../About us/About us.php">About Us</a>
-                
-
-                <a href="../Login/user_login.php" class="btn logout">Logout</a>
-               
-            </nav>
-
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-     </header> 
-
-  <div class="profile-card">
-
-  <div class="profile-header">
-    <img src="user.png" alt="User Photo" id="userPic">
-    <h2 id="name">Loading...</h2>
-    <p id="email"></p>
-  </div>
-
-  <div class="profile-body">
-    <p><b>Library Code:</b> <span id="lib"></span></p>
-    <p><b>Fines:</b> Rs. <span id="fines"></span></p>
-
-    <h3>Borrowed Books</h3>
-    <ul id="books"></ul>
-  </div>
-
-</div>
-
-<script>
-fetch("https://yourapiurl.com/getUserProfile?id=123")
-.then(res => res.json())
-.then(data => {
-
-  document.getElementById("name").innerText = data.name;
-  document.getElementById("email").innerText = data.email;
-  document.getElementById("lib").innerText = data.library_code;
-  document.getElementById("fines").innerText = data.fines;
-
-  let list = "";
-  data.books.forEach(book => {
-    list += `<li>${book}</li>`;
-  });
-
-  document.getElementById("books").innerHTML = list;
-
-});
-</script>
-
-<footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <a href="/" class="footer-logo">OpenLib</a>
-                    <p class="footer-description">Your gateway to knowledge. Explore thousands of books and join our vibrant reading community.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="../User_details/user_detail.php">User Profile</a></li>    
-                        <li><a href="../Home/index.php">Home</a></li>
-                        <li><a href="../User_catalog/user_catalog.php">Catalog</a></li>
-                        <li><a href="../contact/contact.php">Contact</a></li>
-                        <li><a href="../About us/About us.php">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Account</h3>
-                    <ul>
-                        <li><a href="../Login/user_login.php">Log In</a></li>
-                        <li><a href="../Register/register.php">Sign Up</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Library Hours</h3>
-                    <ul>
-                        <li>Mon - Fri: 8:00 AM - 9:00 PM</li>
-                        <li>Saturday: 9:00 AM - 6:00 PM</li>
-                        <li>Sunday: 10:00 AM - 5:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>PageTurn Library. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-
-    <script src="script.js"></script>
-</body>
-</html>
- 
->>>>>>> 8ef47c2ef4cc1bc8e2b7c32dda01a290b3cf3bbf

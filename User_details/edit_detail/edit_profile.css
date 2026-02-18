@@ -256,6 +256,21 @@ body {
   line-height: 1.5;
 }
 
+.btn{
+  padding: 6px 14px;
+  border-radius: 5px;
+}
+
+.logout{
+
+  background: #1abc9c;
+  color: #000;
+}
+.logout:hover{
+  background: #ffffff;
+ 
+}
+
 /* FORM STYLES */
 .form-row {
   display: grid;

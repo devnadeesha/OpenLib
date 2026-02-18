@@ -120,15 +120,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <header class="header">
   <div class="logo">Open<span>Lib</span></div>
 
-  <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
-    <a href="../Borrow/borrow_books.php">Borrow Books</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
-    <a href="../Profile/user_profile.php">My Profile</a>
-    <a href="../Login/user_login.php" class="btn-nav">Logout</a>
-  </nav>
+    <nav class="navbar" id="navMenu">
+                <a href="../../User_details/user_detail.php">User Profile</a>
+                <a href="../../Home/index.php">Home</a>
+                <a href="../../User_catalog/user_catalog.php">Catalog</a>
+                <a href="../../contact/contact.php">Contact</a>
+                <a href="../../About us/About us.php">About Us</a>
+                
+
+                <a href="../../Login/user_login.php" class="btn logout">Logout</a>
+               
+    </nav>
+
 
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>
@@ -163,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <?php endif; ?>
         </div>
         
-        <form method="POST" action="../Profile/upload_profile_picture.php" enctype="multipart/form-data" id="photoForm">
+        <form method="POST" action="../upload_profile_picture.php" enctype="multipart/form-data" id="photoForm">
           <label class="upload-btn">
             <i class='bx bx-camera'></i> Change Photo
             <input type="file" name="profile_picture" accept="image/*" hidden onchange="previewImage(event)">

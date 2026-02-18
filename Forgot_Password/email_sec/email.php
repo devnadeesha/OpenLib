@@ -41,7 +41,7 @@ $conn->close();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forgot Password | OpenLib</title>
-  <link rel="stylesheet" href="../email_sec/email.css">
+  <link rel="stylesheet" href="../email_sec/email.css?v=2">
 </head>
 <body>
 

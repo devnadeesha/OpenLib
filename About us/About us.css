@@ -32,6 +32,15 @@ body{
   font-size: 26px;
   font-weight: bold;
 }
+.logout{
+
+  background: #1abc9c;
+  color: #000;
+}
+.logout:hover{
+  background: #ffffff;
+ 
+}
 
 .logo span{
   color: #1abc9c;
@@ -53,19 +62,9 @@ body{
 .navbar a:hover{
   color: #1abc9c;
 }
-
 .btn{
   padding: 6px 14px;
   border-radius: 5px;
-}
-
-.login{
-  border: 1px solid #1abc9c;
-}
-
-.signup{
-  background: #1abc9c;
-  color: #000;
 }
 
 .menu-toggle{

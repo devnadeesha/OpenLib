@@ -11,16 +11,16 @@
 <header class="header">
         <div class="logo">Open<span>Lib</span></div>
 
-            <nav class="navbar" id="navMenu">
+              <nav class="navbar" id="navMenu">
                 <a href="../User_details/user_detail.php">User Profile</a>
                 <a href="../Home/index.php">Home</a>
-                <a href="../admin_catlog/catlog.php">Catalog</a>
+                <a href="../User_catalog/user_catalog.php">Catalog</a>
                 <a href="../contact/contact.php">Contact</a>
                 <a href="../About us/About us.php">About Us</a>
                 
 
-                <a href="../Login/user_login.php" class="btn login">Login</a>
-                <a href="../Register/register.php" class="btn signup">Sign Up</a>
+                <a href="../Login/user_login.php" class="btn logout">Logout</a>
+               
             </nav>
 
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>

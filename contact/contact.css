@@ -37,6 +37,7 @@ body{
   color: #1abc9c;
 }
 
+
 .navbar{
   display: flex;
   gap: 20px;
@@ -59,20 +60,17 @@ body{
   border-radius: 5px;
 }
 
-.login{
-  border: 1px solid #1abc9c;
-}
+.logout{
 
-.signup{
   background: #1abc9c;
   color: #000;
 }
-.navbar .signup:hover{
+.logout:hover{
   background: #ffffff;
-  color: #1abc9c;
-  
-    
+ 
 }
+
+
 
 .menu-toggle{
   display: none;
