@@ -5,79 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Details | OpenLib</title>
-  <link rel="stylesheet" href="user_detail.css">
+   <link rel="stylesheet" href="user_detail.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">Open<span>Lib</span></div>
+        <div class="logo">Open<span>Lib</span></div>
 
-  <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
-    <a href="#">Catalog</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
-    
+            <nav class="navbar" id="navMenu">
+                <a href="../User_details/user_detail.php">User Profile</a>
+                <a href="../Home/index.php">Home</a>
+                <a href="../User_catalog/user_catalog.php">Catalog</a>
+                <a href="../contact/contact.php">Contact</a>
+                <a href="../About us/About us.php">About Us</a>
+                
 
-    <a href="../Login page/user_login.html" class="btn login">Login</a>
-    <a href="../Register/user_register.html" class="btn signup">Sign Up</a>
-  </nav>
+                <a href="../Login/user_login.php" class="btn logout">Logout</a>
+               
+            </nav>
 
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</header>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+     </header> 
 
-<div class="container">
 
-  <!-- Profile Card -->
-  <div class="contact-container">
-    <form>
-            <div class="input-group">
-                <label>Name</label>
-                <input type="text" placeholder="Enter your name" required>
-            </div>
-
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="input-group">
-                <label>Message</label>
-                <textarea rows="4" placeholder="Type your message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn-msg">Send Message</button>
-        </form>
-  </div>
-
-  <!-- Books Section -->
-  <div class="books-card">
-    <h3>📚 Taken Books</h3>
-
-    <table>
-      <tr>
-        <th>Book Name</th>
-        <th>Borrow Date</th>
-        <th>Return Date</th>
-      </tr>
-
-      <tr>
-        <td>Java Programming</td>
-        <td>2025-02-10</td>
-        <td>2025-02-17</td>
-      </tr>
-
-      <tr>
-        <td>Web Development</td>
-        <td>2025-02-05</td>
-        <td>2025-02-12</td>
-      </tr>
-
-    </table>
-  </div>
-
-</div>
 <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -88,18 +38,18 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
-                        <li><a href="../Home/Main.html">Home</a></li>
-                        <li><a href="#">Book Catalog</a></li>
-                        <li><a href="../contact us/contact.html">Contact</a></li>
-                        <li><a href="../Abou_us/about_us.html">About Us</a></li>
+                        <li><a href="../User_details/user_detail.php">User Profile</a></li>    
+                        <li><a href="../Home/index.php">Home</a></li>
+                        <li><a href="../User_catalog/user_catalog.php">Catalog</a></li>
+                        <li><a href="../contact/contact.php">Contact</a></li>
+                        <li><a href="../About us/About us.php">About Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Account</h3>
                     <ul>
-                        <li><a href="../Login page/user_login.html">Log In</a></li>
-                        <li><a href="../Register/user_register.html">Sign Up</a></li>
+                        <li><a href="../Login/user_login.php">Log In</a></li>
+                        <li><a href="../Register/register.php">Sign Up</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -117,87 +67,8 @@
         </div>
     </footer>
 
-<script src="contact.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
  
-<?php
-session_start();
-
-// Database connection
-$conn = mysqli_connect("localhost","root","","openlib");
-
-if(!$conn){
-    die("Database Connection Failed");
-}
-
-// Temporary user id (later login session eken ganna)
-$user_id = 1;
-
-// Fetch user data
-$user_sql = "SELECT * FROM user WHERE id='$user_id'";
-$user_result = mysqli_query($conn,$user_sql);
-$user = mysqli_fetch_assoc($user_result);
-
-// Fetch taken books
-$book_sql = "SELECT * FROM borrowed_books WHERE user_id='$user_id'";
-$book_result = mysqli_query($conn,$book_sql);
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Details | OpenLib</title>
-  <link rel="stylesheet" href="user_detail.css">
-</head>
-<body>
-
-<header class="header">
-  <div class="logo">Open<span>Lib</span></div>
-</header>
-
-<div class="container">
-
-  <!-- Profile Card -->
-  <div class="profile-card">
-    <img src="uploads/<?php echo $user['photo']; ?>" alt="User Photo">
-
-    <h2><?php echo $user['name']; ?></h2>
-    <p><?php echo $user['email']; ?></p>
-
-    <div class="info">
-      <div><b>Library Code:</b> <?php echo $user['library_code']; ?></div>
-      <div><b>Fines:</b> Rs. <?php echo $user['fines']; ?></div>
-    </div>
-
-    <a href="../User_details/edit_detail/edit_detail.php" class="btn">Edit Profile</a>
-  </div>
-
-  <!-- Books Section -->
-  <div class="books-card">
-    <h3>📚 Taken Books</h3>
-
-    <table>
-      <tr>
-        <th>Book Name</th>
-        <th>Borrow Date</th>
-        <th>Return Date</th>
-      </tr>
-
-      <?php while($row = mysqli_fetch_assoc($book_result)){ ?>
-      <tr>
-        <td><?php echo $row['book_name']; ?></td>
-        <td><?php echo $row['borrow_date']; ?></td>
-        <td><?php echo $row['return_date']; ?></td>
-      </tr>
-      <?php } ?>
-
-    </table>
-  </div>
-
-</div>
-
-</body>
-</html>

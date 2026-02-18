@@ -59,13 +59,13 @@ body{
   border-radius: 5px;
 }
 
-.login{
-  border: 1px solid #1abc9c;
-}
-
-.signup{
+.logout{
   background: #1abc9c;
   color: #000;
+}
+.logout:hover{
+  background: #ffffff;
+ 
 }
 
 .menu-toggle{
@@ -75,142 +75,8 @@ body{
 }
 
 
-/* Profile Card */
 
-.profile-card{
-  background:#fff;
-  border-radius:12px;
-  padding:20px;
-  text-align:center;
-  box-shadow:0 6px 15px rgba(0,0,0,0.1);
-}
 
-.profile-card img{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid #4f46e5;
-}
-
-.profile-card h2{
-  margin:10px 0 4px;
-}
-
-.profile-card p{
-  color:#777;
-  margin-bottom:10px;
-}
-
-.info div{
-  margin:6px 0;
-  font-size:14px;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 16px;
-  background:#4f46e5;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-}
-
-.contact-container{
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-/* Info box */
-.contact-container-info{
-  background: #fff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 380px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-/* Center text */
-.contact-container h2,
-.contact-container p{
-  text-align: center;
-}
-
-.contact-container h2 {
-    text-align: center;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.contact-container p {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #666;
-    font-size: 14px;
-}
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: 500;
-}
-
-.input-group input,
-.input-group textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    outline: none;
-}
-.input-group input:focus,
-.input-group textarea:focus {
-    border-color: #667eea;
-}
-
-.books-card{
-  background:#fff;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 6px 15px rgba(0,0,0,0.1);
-}
-
-.books-card h3{
-  margin-top:0;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td{
-  padding:10px;
-  border-bottom:1px solid #ddd;
-  text-align:left;
-}
-
-th{
-  background:#4f46e5;
-  color:white;
-}
-
-tr:hover{
-  background:#f1f5ff;
-}
-
-/* Responsive */
 
 /* FOOTER */
 .footer{
@@ -297,4 +163,3 @@ tr:hover{
     padding-left: 0;
   }
 }
-   
