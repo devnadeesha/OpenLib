@@ -57,11 +57,11 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
 
         <nav class="navbar" id="navMenu">
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="../Profile/user_profile.php">My Profile</a>
-                <a href="home.php" class="active">Home</a>
-                <a href="../Borrow/borrow_books.php">Borrow Books</a>
+                <a href="../User_details/user_detail.php">My Profile</a>
+                <a href="./index.php" class="active">Home</a>
+                <a href="../Borrow_books/borrow_books.php">Borrow Books</a>
                 <a href="../contact/contact.php">Contact</a>
-                <a href="../About/about_us.php">About Us</a>
+                <a href="../About us/About us.php">About Us</a>
                 <a href="../Login/user_login.php" class="btn logout">Logout</a>
             <?php else: ?>
                 <a href="home.php" class="active">Home</a>
