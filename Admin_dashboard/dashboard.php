@@ -55,8 +55,8 @@ $recentActivities = $recentStmt->fetchAll(PDO::FETCH_ASSOC);
   <nav class="navbar" id="navMenu">
     <a href="../view_massages/view_messages.php" class="btn login special">View Messages</a>
     <a href="../Admin_dashboard/dashboard.php" class="active">Dashboard</a>
-    <a href="../admin_catlog/catalog.php">Add New Books</a>
-    <a href="../Manage_books/add_book.php">Catalog</a>
+    <a href="../admin_catlog/catalog.php">Catalog</a>
+    <a href="../Manage_books/add_book.php">Add New Book</a>
     <a href="../Login/user_login.php" class="btn login">Logout</a>
   </nav>
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>

@@ -154,3 +154,25 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- Contact Messages Table
+CREATE TABLE contact_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    subject VARCHAR(200) DEFAULT NULL,
+    message TEXT NOT NULL,
+    status ENUM('unread', 'read', 'replied') DEFAULT 'unread',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    replied_at TIMESTAMP NULL DEFAULT NULL,
+    admin_notes TEXT DEFAULT NULL,
+    INDEX idx_status (status),
+    INDEX idx_created_at (created_at),
+    INDEX idx_email (email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Sample data (optional - for testing)
+-- INSERT INTO contact_messages (name, email, message) VALUES
+-- ('John Doe', 'john@example.com', 'I would like to know more about membership.'),
+-- ('Jane Smith', 'jane@example.com', 'How can I renew my borrowed books?');
