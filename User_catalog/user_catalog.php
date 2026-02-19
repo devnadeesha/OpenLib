@@ -20,8 +20,8 @@
                 <a href="../About us/About us.php">About Us</a>
                 
 
-                <a href="../Login/user_login.php" class="btn login">Login</a>
-                <a href="../Register/register.php" class="btn signup">Sign Up</a>
+                <a href="../Login/user_login.php" class="btn logout">Logout</a>
+               
             </nav>
 
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
