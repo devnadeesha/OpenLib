@@ -91,7 +91,7 @@ foreach ($borrowed_books as $book) {
   <div class="logo">Open<span>Lib</span></div>
 
      <nav class="navbar" id="navMenu">
-                <a href="../User_details/user_detail.php">User Profile</a>
+                <a href="../User_details/user_detail.php" class="active">User Profile</a>
                 <a href="../Home/index.php">Home</a>
                 <a href="../User_catalog/user_catalog.php">Catalog</a>
                 <a href="../contact/contact.php">Contact</a>
@@ -324,18 +324,17 @@ foreach ($borrowed_books as $book) {
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
-          <li><a href="../Home/Main.html">Home</a></li>
+          <li><a href="../Home/index.php">Home</a></li>
           <li><a href="../Borrow_books/borrow_books.php">Borrow Books</a></li>
-          <li><a href="../contact us/contact.html">Contact</a></li>
-          <li><a href="../Abou_us/about_us.html">About Us</a></li>
+          <li><a href="../contact/contact.php">Contact</a></li>
+          <li><a href="../About us/about us.php">About Us</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h3>Account</h3>
         <ul>
-          <li><a href="user_profile.php">My Profile</a></li>
-          <li><a href="edit_profile.php">Edit Profile</a></li>
+          <li><a href="../User_details/user_detail.php">My Profile</a></li>
+          <li><a href="../User_details/edit_detail/edit_profile.php">Edit Profile</a></li>
           <li><a href="../Login/user_login.php">Logout</a></li>
         </ul>
       </div>

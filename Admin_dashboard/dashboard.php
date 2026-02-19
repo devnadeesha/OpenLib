@@ -46,18 +46,17 @@ $recentActivities = $recentStmt->fetchAll(PDO::FETCH_ASSOC);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard | OpenLib</title>
-  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="dashboard.css?v=2">
 </head>
 <body>
 
 <header class="header">
   <div class="logo">Open<span>Lib</span></div>
   <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.php">Dashboard</a>
-    <a href="../Home/Main.html">Home</a>
-    <a href="#">Catalog</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
+    <a href="../view_massages/view_messages.php" class="btn login special">View Messages</a>
+    <a href="../Admin_dashboard/dashboard.php" class="active">Dashboard</a>
+    <a href="../admin_catlog/catalog.php">Add New Books</a>
+    <a href="../Manage_books/add_book.php">Catalog</a>
     <a href="../Login/user_login.php" class="btn login">Logout</a>
   </nav>
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -94,9 +93,11 @@ $recentActivities = $recentStmt->fetchAll(PDO::FETCH_ASSOC);
         <h2>Quick Actions</h2>
         <div class="action-buttons">
           <a href="../Manage_books/add_book.php" class="btn">Add New Book</a>
-          <a href="#" class="btn">View Catalog</a>
+          <a href="../admin_catlog/catalog.php" class="btn">View Catalog</a>
           <a href="../Manage_members/manage_members.php" class="btn">Manage Users</a>
           <a href="../Borrow_history/borrow_history.php" class="btn">Borrow History</a>
+        
+          
         </div>
       </div>
 
@@ -135,17 +136,16 @@ $recentActivities = $recentStmt->fetchAll(PDO::FETCH_ASSOC);
         <h3>Quick Links</h3>
         <ul>
           <li><a href="../dashboard/dashboard.php">Dashboard</a></li>
-          <li><a href="../Home/Main.html">Home</a></li>
-          <li><a href="#">Book Catalog</a></li>
-          <li><a href="../contact us/contact.html">Contact</a></li>
-          <li><a href="../Abou_us/about_us.html">About Us</a></li>
+          <li><a href="../Borrow_history/borrow_history.php">Borrow_history</a></li>
+          <li><a href="../admin_catlog/catalog.php">Book Catalog</a></li>
+          <li><a href="../Manage_books/add_book.php">Manage Books</a></li>
+          <li><a href="../Manage_members/manage_members.php">Manage Members</a></li>
         </ul>
       </div>
       <div class="footer-column">
         <h3>Account</h3>
         <ul>
-          <li><a href="../Login page/user_login.html">Log In</a></li>
-          <li><a href="../Register/user_register.html">Sign Up</a></li>
+          <li><a href="../Login page/user_login.html">Log Out</a></li>
         </ul>
       </div>
       <div class="footer-column">

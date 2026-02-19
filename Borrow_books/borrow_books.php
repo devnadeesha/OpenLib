@@ -241,11 +241,10 @@ $genres = $stmt->fetchAll(PDO::FETCH_COLUMN);
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="../dashboard/dashboard.html">Dashboard</a>
     <a href="../Home/Main.html">Home</a>
     <a href="borrow_books.php" class="active">Borrow Books</a>
-    <a href="../contact us/contact.html">Contact</a>
-    <a href="../Abou_us/about_us.html">About Us</a>
+    <a href="../contact/contact.php">Contact</a>
+    <a href="../Abou us/about us.php">About Us</a>
     <a href="../Login/user_login.php" class="btn-nav">Logout</a>
   </nav>
 
@@ -541,11 +540,10 @@ $genres = $stmt->fetchAll(PDO::FETCH_COLUMN);
       <div class="footer-column">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
-          <li><a href="../Home/Main.html">Home</a></li>
+          <li><a href="../Home/index.php">Home</a></li>
           <li><a href="borrow_books.php">Borrow Books</a></li>
-          <li><a href="../contact us/contact.html">Contact</a></li>
-          <li><a href="../Abou_us/about_us.html">About Us</a></li>
+          <li><a href="../contact/contact.php">Contact</a></li>
+          <li><a href="../About us/about us.php">About Us</a></li>
         </ul>
       </div>
       <div class="footer-column">

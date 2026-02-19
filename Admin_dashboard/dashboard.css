@@ -53,16 +53,43 @@ body{
 .navbar a:hover{
   color: #1abc9c;
 }
+.btn .special{
+  padding: 6px 50px;
+  align-items: center;
+}
 
 .btn{
   padding: 6px 14px;
   border-radius: 5px;
 }
 
+.navbar a.active {
+  color: #1abc9c;
+}
+
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1abc9c;
+}
+
+
 .login{
   border: 1px solid #1abc9c;
 }
 
+.special{
+  background-color: #1abc9c ;
+}
+.special :hover{
+  border: #fff;
+  background-color: #1abc9c ;
+  color: #ffffff;
+}
 .menu-toggle{
   display: none;
   font-size: 26px;

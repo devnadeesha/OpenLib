@@ -55,6 +55,21 @@ body{
   color: #1abc9c;
 }
 
+.navbar a.active {
+  color: #1abc9c;
+}
+
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1abc9c;
+  text-decoration:dashed;
+}
+
 .btn{
   padding: 6px 14px;
   border-radius: 5px;

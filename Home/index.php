@@ -216,7 +216,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
             <?php endif; ?>
             
             <div class="text-center">
-                <a href="../Borrow/borrow_books.php" class="btn btn-primary">
+                <a href="../Borrow_books/borrow_books.php" class="btn btn-primary">
                     <i class='bx bx-library'></i> View All Books
                 </a>
             </div>
@@ -234,7 +234,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                         <i class='bx bx-user-plus'></i> Sign Up Now
                     </a>
                 <?php else: ?>
-                    <a href="../Borrow/borrow_books.php" class="btn btn-cta">
+                    <a href="../Borrow_books/borrow_books.php" class="btn btn-cta">
                         <i class='bx bx-book-add'></i> Browse Books
                     </a>
                 <?php endif; ?>
@@ -260,8 +260,8 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="home.php">Home</a></li>
-                        <li><a href="../Borrow/borrow_books.php">Browse Books</a></li>
-                        <li><a href="../About/about_us.php">About Us</a></li>
+                        <li><a href="../Borrow_books/borrow_books.php">Browse Books</a></li>
+                        <li><a href="../About us/About us.php">About Us</a></li>
                         <li><a href="../contact/contact.php">Contact</a></li>
                     </ul>
                 </div>
@@ -269,8 +269,8 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                     <h3>Account</h3>
                     <ul>
                         <?php if (isset($_SESSION['user_id'])): ?>
-                            <li><a href="../Profile/user_profile.php">My Profile</a></li>
-                            <li><a href="../Borrow/borrow_books.php">Borrow Books</a></li>
+                            <li><a href="../User_details/user_detail.php">My Profile</a></li>
+                            <li><a href="../Borrow_books/borrow_books.php">Borrow Books</a></li>
                             <li><a href="../Login/user_login.php">Logout</a></li>
                         <?php else: ?>
                             <li><a href="../Login/user_login.php">Log In</a></li>
