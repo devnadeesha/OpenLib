@@ -57,18 +57,18 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
 
         <nav class="navbar" id="navMenu">
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="../User_details/user_detail.php">My Profile</a>
-                <a href="./index.php" class="active">Home</a>
-                <a href="../Borrow_books/borrow_books.php">Borrow Books</a>
-                <a href="../contact/contact.php">Contact</a>
-                <a href="../About us/About us.php">About Us</a>
-                <a href="../Login/user_login.php" class="btn logout">Logout</a>
+                <a href="User_details/user_detail.php">My Profile</a>
+                <a href="index.php" class="active">Home</a>
+                <a href="Borrow_books/borrow_books.php">Borrow Books</a>
+                <a href="contact/contact.php">Contact</a>
+                <a href="About us/About us.php">About Us</a>
+                <a href="Login/user_login.php" class="btn logout">Logout</a>
             <?php else: ?>
-                <a href="home.php" class="active">Home</a>
-                <a href="../About/about_us.php">About Us</a>
-                <a href="../contact/contact.php">Contact</a>
-                <a href="../Login/user_login.php" class="btn login">Login</a>
-                <a href="../Register/user_register.php" class="btn signup">Sign Up</a>
+                <a href="index.php" class="active">Home</a>
+                <a href="About/about_us.php">About Us</a>
+                <a href="contact/contact.php">Contact</a>
+                <a href="Login/user_login.php" class="btn login">Login</a>
+                <a href="Register/user_register.php" class="btn signup">Sign Up</a>
             <?php endif; ?>
         </nav>
 
@@ -166,8 +166,8 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                     <?php foreach ($popular_books as $book): ?>
                     <div class="book-card">
                         <div class="book-image">
-                            <?php if (!empty($book['cover_image']) && file_exists('../Manage_books/'.$book['cover_image'])): ?>
-                            <img src="<?php echo htmlspecialchars('../Manage_books/'.$book['cover_image']); ?>">
+                            <?php if (!empty($book['cover_image']) && file_exists('Manage_books/'.$book['cover_image'])): ?>
+                            <img src="<?php echo htmlspecialchars('Manage_books/'.$book['cover_image']); ?>">
                                 <div class="no-image">
                                     <i class='bx bx-book'></i>
                                 </div>
@@ -196,7 +196,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                             
                             <?php if (isset($_SESSION['user_id'])): ?>
                                 <?php if ($book['available_quantity'] > 0): ?>
-                                    <a href="../Borrow/borrow_books.php?search=<?php echo urlencode($book['title']); ?>" class="btn-borrow">
+                                    <a href="Borrow/borrow_books.php?search=<?php echo urlencode($book['title']); ?>" class="btn-borrow">
                                         <i class='bx bx-book-add'></i> Borrow Now
                                     </a>
                                 <?php else: ?>
@@ -205,7 +205,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                                     </button>
                                 <?php endif; ?>
                             <?php else: ?>
-                                <a href="../Login/user_login.php" class="btn-login">
+                                <a href="Login/user_login.php" class="btn-login">
                                     <i class='bx bx-log-in'></i> Login to Borrow
                                 </a>
                             <?php endif; ?>
@@ -216,7 +216,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
             <?php endif; ?>
             
             <div class="text-center">
-                <a href="../Borrow_books/borrow_books.php" class="btn btn-primary">
+                <a href="View book/view_book.php" class="btn btn-primary">
                     <i class='bx bx-library'></i> View All Books
                 </a>
             </div>
@@ -230,11 +230,11 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                 <h2>Ready to Start Your Reading Journey?</h2>
                 <p>Join <?php echo number_format($active_members); ?>+ book lovers and get access to our extensive collection today!</p>
                 <?php if (!isset($_SESSION['user_id'])): ?>
-                    <a href="../Register/user_register.php" class="btn btn-cta">
+                    <a href="Register/user_register.php" class="btn btn-cta">
                         <i class='bx bx-user-plus'></i> Sign Up Now
                     </a>
                 <?php else: ?>
-                    <a href="../Borrow_books/borrow_books.php" class="btn btn-cta">
+                    <a href="View book/view_book.php" class="btn btn-cta">
                         <i class='bx bx-book-add'></i> Browse Books
                     </a>
                 <?php endif; ?>
@@ -260,21 +260,21 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="home.php">Home</a></li>
-                        <li><a href="../Borrow_books/borrow_books.php">Browse Books</a></li>
-                        <li><a href="../About us/About us.php">About Us</a></li>
-                        <li><a href="../contact/contact.php">Contact</a></li>
+                        <li><a href="View book/view_book.php">Browse Books</a></li>
+                        <li><a href="About us/About us.php">About Us</a></li>
+                        <li><a href="contact/contact.php">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Account</h3>
                     <ul>
                         <?php if (isset($_SESSION['user_id'])): ?>
-                            <li><a href="../User_details/user_detail.php">My Profile</a></li>
-                            <li><a href="../Borrow_books/borrow_books.php">Borrow Books</a></li>
-                            <li><a href="../Login/user_login.php">Logout</a></li>
+                            <li><a href="User_details/user_detail.php">My Profile</a></li>
+                            <li><a href="Borrow_books/borrow_books.php">Borrow Books</a></li>
+                            <li><a href="Login/user_login.php">Logout</a></li>
                         <?php else: ?>
-                            <li><a href="../Login/user_login.php">Log In</a></li>
-                            <li><a href="../Register/user_register.php">Sign Up</a></li>
+                            <li><a href="Login/user_login.php">Log In</a></li>
+                            <li><a href="Register/user_register.php">Sign Up</a></li>
                         <?php endif; ?>
                     </ul>
                 </div>

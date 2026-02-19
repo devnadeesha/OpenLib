@@ -216,7 +216,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
             <?php endif; ?>
             
             <div class="text-center">
-                <a href="../Borrow_books/borrow_books.php" class="btn btn-primary">
+                <a href="../View book/view_book.php" class="btn btn-primary">
                     <i class='bx bx-library'></i> View All Books
                 </a>
             </div>
@@ -234,7 +234,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                         <i class='bx bx-user-plus'></i> Sign Up Now
                     </a>
                 <?php else: ?>
-                    <a href="../Borrow_books/borrow_books.php" class="btn btn-cta">
+                    <a href="../View book/view_book.php class="btn btn-cta">
                         <i class='bx bx-book-add'></i> Browse Books
                     </a>
                 <?php endif; ?>
