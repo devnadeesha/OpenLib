@@ -349,9 +349,8 @@ $genres = $stmt->fetchAll(PDO::FETCH_COLUMN);
         <?php foreach ($available_books as $book): ?>
         <div class="book-card">
           <div class="book-image">
-            <?php if (!empty($book['cover_image']) && file_exists($book['cover_image'])): ?>
-              <img src="<?php echo htmlspecialchars($book['cover_image']); ?>" alt="<?php echo htmlspecialchars($book['title']); ?>">
-            <?php else: ?>
+           <?php if (!empty($book['cover_image']) && file_exists('../Manage_books/' . $book['cover_image'])): ?>
+            <img src="../Manage_books/<?php echo htmlspecialchars($book['cover_image']); ?>">
               <div class="no-image"><i class='bx bx-book'></i></div>
             <?php endif; ?>
             <div class="availability-badge">

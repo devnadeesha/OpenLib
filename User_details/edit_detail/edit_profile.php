@@ -157,8 +157,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       
       <div class="photo-section">
         <div class="profile-image-wrapper">
-          <?php if (!empty($user['profile_picture']) && file_exists('../Profile/uploads/profile_pictures/' . $user['profile_picture'])): ?>
-            <img src="../Profile/uploads/profile_pictures/<?php echo htmlspecialchars($user['profile_picture']); ?>" alt="Profile Picture" id="profilePreview">
+          <?php if (!empty($user['profile_picture']) && file_exists('uploads/' . $user['profile_picture'])): ?>
+            <img src="'uploads/'<?php echo htmlspecialchars($user['profile_picture']); ?>" alt="Profile Picture" id="profilePreview">
           <?php else: ?>
             <div class="default-avatar" id="profilePreview">
               <i class='bx bx-user'></i>
