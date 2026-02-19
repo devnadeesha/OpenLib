@@ -28,7 +28,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <p class="hero-subtitle">Welcome to OpenLib Library</p>
+            <p class="hero-subtitle">Welcome to <span>Open<span class="span1">Lib</span></span> Library</p>
             <h1 class="hero-title">Discover Your Next Great Read</h1>
             <p class="hero-description">Explore thousands of books across every genre — from timeless classics to the latest releases.</p>
             <div class="search-container">

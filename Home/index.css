@@ -135,7 +135,7 @@ body{
 .hero {
     text-align: center;
     padding: 5rem 0;
-    background: linear-gradient(135deg, #2b1e16 0%, #7a4a2e 50%, #c2a15f 100%);
+    background: url(../Pictures/pexels-repuding-12064.jpg)no-repeat center center/cover;
     color: #f9f6f2;
 }
 
@@ -143,6 +143,12 @@ body{
     font-size: 1rem;
     margin-bottom: 1rem;
     opacity: 0.9;
+}
+.hero-subtitle span {
+    font-weight: bold;
+}
+.hero-subtitle .span1 {
+    color: #1abc9c;
 }
 
 .hero-title {
