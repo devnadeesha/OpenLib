@@ -55,9 +55,6 @@ body{
   color: #1abc9c;
 }
 
-.navbar a.active {
-  color: #1abc9c;
-}
 
 .navbar a.active::after {
   content: '';

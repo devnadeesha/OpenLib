@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <a href="../User_details/user_detail.php">My Profile</a>
     <a href="../Home/index.php">Home</a>
     <a href="../Borrow_books/borrow_books.php">Borrow Books</a>
-    <a href="contact.php" class="active">Contact</a>
+    <a href="../contact/contact.php" class="active">Contact</a>
     <a href="../About us/About us.php">About Us</a>
     <a href="../Login/user_login.php" class="btn logout">Logout</a>
   </nav>
@@ -168,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <ul>
           <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
           <li><a href="../Home/Main.html">Home</a></li>
-          <li><a href="#">Book Catalog</a></li>
+          <li><a href="../">Book Catalog</a></li>
           <li><a href="contact.php">Contact</a></li>
           <li><a href="../About us/about_us.php">About Us</a></li>
         </ul>
