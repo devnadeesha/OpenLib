@@ -107,7 +107,7 @@ function handleBorrow($conn, $user_id, &$errors, &$success) {
         $stmt->execute([$book_id]);
         
         $conn->commit();
-        $success = "Book borrowed successfully! Please return by " . date('F d, Y', strtotime($due_date));
+        $success = "Book borrowed successfully! You can get the book from library. Please return by " . date('F d, Y', strtotime($due_date));
     } catch(PDOException $e) {
         $conn->rollBack();
         $errors[] = "Error borrowing book: " . $e->getMessage();

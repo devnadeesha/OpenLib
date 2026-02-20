@@ -196,7 +196,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                             
                             <?php if (isset($_SESSION['user_id'])): ?>
                                 <?php if ($book['available_quantity'] > 0): ?>
-                                    <a href="../Borrow/borrow_books.php?search=<?php echo urlencode($book['title']); ?>" class="btn-borrow">
+                                    <a href="../Borrow_books/borrow_books.php?search=<?php echo urlencode($book['title']); ?>" class="btn-borrow">
                                         <i class='bx bx-book-add'></i> Borrow Now
                                     </a>
                                 <?php else: ?>
@@ -216,7 +216,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
             <?php endif; ?>
             
             <div class="text-center">
-                <a href="../View book/view_book.php" class="btn btn-primary">
+                <a href="../Borrow_books/borrow_books.php" class="btn btn-primary">
                     <i class='bx bx-library'></i> View All Books
                 </a>
             </div>
@@ -230,14 +230,14 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                 <h2>Ready to Start Your Reading Journey?</h2>
                 <p>Join <?php echo number_format($active_members); ?>+ book lovers and get access to our extensive collection today!</p>
                 <?php if (!isset($_SESSION['user_id'])): ?>
-                    <a href="../Register/user_register.php" class="btn btn-cta">
+                    <a href="../Register/register.php" class="btn btn-cta">
                         <i class='bx bx-user-plus'></i> Sign Up Now
                     </a>
                 <?php else: ?>
-                    <a href="../View book/view_book.php class="btn btn-cta">
+                    <a href="../Borrow_books/borrow_books.php"class="btn-cta">
                         <i class='bx bx-book-add'></i> Browse Books
                     </a>
-                <?php endif; ?>
+                <?php endif; ?> 
             </div>
         </div>
     </section>
@@ -259,7 +259,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="home.php">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="../Borrow_books/borrow_books.php">Browse Books</a></li>
                         <li><a href="../About us/About us.php">About Us</a></li>
                         <li><a href="../contact/contact.php">Contact</a></li>
