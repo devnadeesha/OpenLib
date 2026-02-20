@@ -241,10 +241,11 @@ $genres = $stmt->fetchAll(PDO::FETCH_COLUMN);
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="../Home/Main.html">Home</a>
+    <a href="../User_details/user_detail.php">My Profile</a>
+    <a href="../Home/index.php">Home</a>
     <a href="borrow_books.php" class="active">Borrow Books</a>
     <a href="../contact/contact.php">Contact</a>
-    <a href="../Abou us/about us.php">About Us</a>
+    <a href="../About us/About us.php">About Us</a>
     <a href="../Login/user_login.php" class="btn-nav">Logout</a>
   </nav>
 
