@@ -73,8 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div class="logo">Open<span>Lib</span></div>
 
   <nav class="navbar" id="navMenu">
-    <a href="../User_details/user_detail.php">User Profile</a>
+    <a href="../User_details/user_detail.php">My Profile</a>
     <a href="../Home/index.php">Home</a>
+    <a href="../Borrow_books/borrow_books.php">Borrow Books</a>
     <a href="contact.php" class="active">Contact</a>
     <a href="../About us/About us.php">About Us</a>
     <a href="../Login/user_login.php" class="btn logout">Logout</a>
