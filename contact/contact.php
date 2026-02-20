@@ -168,8 +168,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <ul>
           <li><a href="../dashboard/dashboard.html">Dashboard</a></li>    
           <li><a href="../Home/Main.html">Home</a></li>
-          <li><a href="../">Book Catalog</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li><a href="../Borrow_books/borrow_books.php">Borrow Books</a></li>
+          <li><a href="../contact/contact.php">Contact</a></li>
           <li><a href="../About us/about_us.php">About Us</a></li>
         </ul>
       </div>
