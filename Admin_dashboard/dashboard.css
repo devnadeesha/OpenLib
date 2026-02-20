@@ -74,21 +74,30 @@ body{
   left: 0;
   right: 0;
   height: 2px;
-  background: #1abc9c;
+  
 }
 
 
 .login{
+  padding: 6px 14px;
+  border-radius: 5px;
   border: 1px solid #1abc9c;
+  background: #1abc9c;
+  color: #000;
+}
+.login:hover{
+  background: #ffffff;
 }
 
 .special{
-  background-color: #1abc9c ;
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: 1px solid #1abc9c;
+  background: #1abc9c;
+  color: #000;
 }
 .special :hover{
-  border: #fff;
-  background-color: #1abc9c ;
-  color: #ffffff;
+  background: #ffffff;
 }
 .menu-toggle{
   display: none;
