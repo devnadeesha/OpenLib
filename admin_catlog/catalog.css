@@ -7,7 +7,7 @@ body{background:#f4f6f9;}
 .navbar{display:flex;gap:20px;align-items:center;}
 .navbar a{text-decoration:none;color:#fff;font-size:16px;transition:0.3s;}
 .navbar a:hover,.navbar a.active{color:#1abc9c;}
-.btn{padding:6px 14px;border-radius:5px;}.login{border:1px solid #1abc9c;}
+.btn{padding:6px 14px;border-radius:5px;}.logout{padding: 6px 14px;border-radius: 5px;border: 1px solid #1abc9c;background: #1abc9c;color: #000;}.logout:hover {background: #ffffff;}
 .menu-toggle{display:none;font-size:26px;cursor:pointer;}
 
 /* ALERT */
