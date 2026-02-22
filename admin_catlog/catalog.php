@@ -80,7 +80,7 @@ $badgeMap = ['Programming'=>'badge-prog','Fiction'=>'badge-fic','Science'=>'badg
     <a href="../admin_catlog/catalog.php" class="active">Catalog</a>
     <a href="../contact/contact.php">Contact</a>
     <a href="../About us/About us.php">About Us</a>
-    <a href="../Register/register.php" class="btn login">Logout</a>
+    <a href="../Login/user_login.php" class="btn logout">Logout</a>
   </nav>
   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 </header>

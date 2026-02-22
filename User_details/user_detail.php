@@ -91,9 +91,9 @@ foreach ($borrowed_books as $book) {
   <div class="logo">Open<span>Lib</span></div>
 
      <nav class="navbar" id="navMenu">
-                <a href="../User_details/user_detail.php" class="active">User Profile</a>
+                <a href="../User_details/user_detail.php" class="active">My Profile</a>
                 <a href="../Home/index.php">Home</a>
-                <a href="../User_catalog/user_catalog.php">Catalog</a>
+                <a href="../Borrow_books/borrow_books.php">Borrow Books</a>
                 <a href="../contact/contact.php">Contact</a>
                 <a href="../About us/About us.php">About Us</a>
                 

@@ -56,15 +56,19 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: #1abc9c;
+  
 }
 
 .btn-nav {
   padding: 6px 14px;
   border-radius: 5px;
   border: 1px solid #1abc9c;
+  background: #1abc9c;
+  color: #000;
 }
-
+.btn-nav:hover{
+  background: #ffffff;
+}
 .menu-toggle {
   display: none;
   font-size: 26px;

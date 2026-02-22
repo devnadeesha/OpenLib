@@ -51,10 +51,7 @@ body{
   transition: 0.3s;
 }
 
-.navbar a:hover{
-  color: #1abc9c;
-}
-
+.navbar a:hover,
 .navbar a.active {
   color: #1abc9c;
 }
