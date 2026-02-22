@@ -201,7 +201,7 @@ foreach ($borrowed_books as $book) {
             <i class='bx bx-dollar-circle'></i>
           </div>
           <div class="stat-info">
-            <h3>$<?php echo number_format($total_fines, 2); ?></h3>
+            <h3>Rs.<?php echo number_format($total_fines, 2); ?></h3>
             <p>Total Fines</p>
           </div>
         </div>
