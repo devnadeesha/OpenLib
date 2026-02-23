@@ -1,8 +1,6 @@
 <?php
-// db_connect.php
-
 $host   = 'localhost';
-$dbname = 'openlib';  // ← Changed from 'openlib_db' to match your existing database
+$dbname = 'openlib'; 
 $user   = 'root';
 $pass   = '';
 
@@ -13,7 +11,7 @@ try {
     ]);
 } catch (PDOException $e) {
     die("<p style='color:red;padding:20px;font-family:sans-serif;'>
-        ❌ Database connection failed: " . htmlspecialchars($e->getMessage()) . "
+        Database connection failed: " . htmlspecialchars($e->getMessage()) . "
         <br>Check your db_connect.php settings.
     </p>");
 }
