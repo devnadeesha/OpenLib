@@ -64,8 +64,8 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                 <a href="../About us/About us.php">About Us</a>
                 <a href="../Login/user_login.php" class="btn logout">Logout</a>
             <?php else: ?>
-                <a href="home.php" class="active">Home</a>
-                <a href="../About/about_us.php">About Us</a>
+                <a href="index.php" class="active">Home</a>
+                <a href="../About us/about us.php">About Us</a>
                 <a href="../contact/contact.php">Contact</a>
                 <a href="../Login/user_login.php" class="btn login">Login</a>
                 <a href="../Register/user_register.php" class="btn signup">Sign Up</a>
@@ -216,7 +216,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
             <?php endif; ?>
             
             <div class="text-center">
-                <a href="../Borrow_books/borrow_books.php" class="btn btn-primary">
+                <a href="../View book/view_book.php" class="btn btn-primary">
                     <i class='bx bx-library'></i> View All Books
                 </a>
             </div>
@@ -260,7 +260,7 @@ $total_genres = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="../Borrow_books/borrow_books.php">Browse Books</a></li>
+                        <li><a href="../View book/view_book.php">Browse Books</a></li>
                         <li><a href="../About us/About us.php">About Us</a></li>
                         <li><a href="../contact/contact.php">Contact</a></li>
                     </ul>
